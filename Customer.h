@@ -1,9 +1,10 @@
 #ifndef CUSTOMER_H
 #define CUSTOMER_H
 
+#include "Transaction.h"
 #include <string>
 #include <vector>
-#include "Transaction.h"
+
 
 using namespace std;
 
