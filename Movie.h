@@ -15,7 +15,7 @@ public:
     virtual ~Movie();
 
     //virutal function to display movie details, derived classes will implement this
-    virtual void display() const;
+    virtual void display() const = 0;
     
     //returns type of movie
     char getType() const;
@@ -36,8 +36,8 @@ public:
     string getTitle() const;
 
     //derived classes will implement each comparison logic
-    virtual bool operator==(const Movie& other) const;
-    virtual bool operator<(const Movie& other) const;
+    virtual bool operator==(const Movie& other) const = 0;
+    virtual bool operator<(const Movie& other) const = 0;
 
 protected:
     //movie type, F D or C
