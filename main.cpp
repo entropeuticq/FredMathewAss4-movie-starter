@@ -25,7 +25,8 @@ int main() {
   customerManager.loadCustomers("data4customers.txt");
 
   CommandProcessor commandProcessor(inventory, customerManager);
-  
+
   commandProcessor.processCommands("data4commands.txt");
 
+  return 0;
 }
