@@ -9,6 +9,10 @@
 
 class Inventory {
 public:
+    //loads movies from given file
+    void loadMovies(const string& filename);
+
+
     //adds a movie to inventory based on its type
     void addMovie(Movie* movie);
 
