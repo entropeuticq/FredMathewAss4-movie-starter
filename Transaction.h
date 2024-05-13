@@ -21,10 +21,12 @@ public:
     string getDescription() const;
 
     //virtual because derived classes will implement executing a transaction
-    virtual void execute();
+    //based on whether it is a borrow or a return
+    virtual void execute() = 0;
 
-    //displays transaction details
-    virtual void display() const;
+    //displays transaction details, implemented separately by derived classes
+    //based on whether it is a borrow or return
+    virtual void display() const = 0;
 
 protected:
     //transaction type, B for borrow, R for return
