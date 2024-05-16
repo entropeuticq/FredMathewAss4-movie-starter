@@ -2,10 +2,13 @@
 #define TRANSACTION_H
 
 #include "Movie.h"
-#include "Customer.h"
+
 #include <string>
 
 using namespace std;
+
+//forward declaration
+class Customer;
 
 class Transaction {
 public:
