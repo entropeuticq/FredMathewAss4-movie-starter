@@ -1,9 +1,11 @@
 #ifndef TRANSACTION_H
 #define TRANSACTION_H
 
-#include "Movie.h"
-#include "Customer.h"
 #include <string>
+
+//forward declaration, debugging file linkage
+class Customer;
+class Movie;
 
 using namespace std;
 
@@ -38,7 +40,7 @@ protected:
 class Borrow : public Transaction {
 public:
     //constructor, initializes attributes based on borrowed movie and borrower
-    Borrow(Customer* customer, Movie* movie) : Transaction('B', "Borrowed " + movie->getTitle() + " by " + customer->getFullName()), customer(customer), movie(movie) {}
+    Borrow(Customer* customer, Movie* movie);
 
     //execute borrow transaction
     void execute() override;
@@ -58,7 +60,7 @@ private:
 class Return : public Transaction {
 public:
     //constructor, initializes return with return attributes
-    Return(Customer* customer, Movie* movie) : Transaction('R', "Returned " + movie->getTitle() + " by " + customer->getFullName()), customer(customer), movie(movie) {}
+    Return(Customer* customer, Movie* movie);
 
     //executes the return transaction
     void execute() override;
