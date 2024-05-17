@@ -1,4 +1,6 @@
 #include "Transaction.h"
+#include "Customer.h"
+#include "Movie.h"
 
 //virtual destructor ensuring that borrow and return destructors
 //are called when deleting objects through base class pointer
@@ -17,6 +19,13 @@ string Transaction::getDescription() const {
 }
 
 //BORROW
+//constructor
+ Borrow::Borrow(Customer* customer, Movie* movie) : Transaction('B', ""), customer(customer), movie(movie) {
+    if (customer && movie) {
+        description = "Borrowed " + movie->getTitle() + " by " + customer->getFullName();
+    }
+ } 
+
 //execute borrow transaction
 void Borrow::execute() {
     if(movie->decreaseStock()) {
@@ -34,6 +43,13 @@ void Borrow::display() const {
 }
 
 //RETURN
+//constructor
+ Return::Return(Customer* customer, Movie* movie) : Transaction('R', ""), customer(customer), movie(movie) {
+    if (customer && movie) {
+        description = "Returned " + movie->getTitle() + " by " + customer->getFullName();
+    }
+ } 
+
 //execute return transaction
 void Return::execute() {
     movie->increaseStock(1);
@@ -43,5 +59,6 @@ void Return::execute() {
 
 //display return transaction details, customer name and movie title
 void Return::display() const {
-    cout << "Returned: " << movie->getTitle() << " by " customer->getFullName();
+    cout << "Returned: " << movie->getTitle() << " by " << customer->getFullName();
 }
+

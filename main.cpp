@@ -5,7 +5,8 @@
 // #include "CustomerManager.h"
 // #include "CommandProcessor.h"
 #include "Movie.h"
-
+#include "Customer.h"
+#include "Transaction.h"
 #include <iostream>
 #include <cassert>
 
@@ -26,10 +27,12 @@ int main() {
   // CommandProcessor commandProcessor(inventory, customerManager);
   // commandProcessor.processCommands("data4commands.txt");
 
+  //TEST MOVIE.CPP
   //instances of each movie type
   Comedy comedyMovie(10, "Wes Anderson", "The Grand Budapest Hotel", 2014);
   Drama dramaMovie(5, "Frank Darabont", "The Shawshank Redemption", 1994);
   Classic classicMovie(3, "Victor Fleming", "Gone with the Wind", "Clark Gable", 1, 1939);
+  Customer customer(1234, "John", "Doe");
 
   //display tests
   cout << "Testing display functionality:\n";
@@ -62,7 +65,28 @@ int main() {
   Drama dramaMovie3(5, "Christohper Nolan", "Inception", 2010);
   assert(!(dramaMovie == dramaMovie3));
 
-  cout << "All tests passed!" << endl;
+  cout << "All Movie tests passed!" << endl;
+
+  //TEST TRANSACTION.CPP and CUSTOMER.CPP
+  //borrows and returns
+  Borrow borrow1(&customer, &comedyMovie);
+  borrow1.execute();
+  Return return1(&customer, &comedyMovie);
+  return1.execute();
+  Borrow borrow2(&customer, &dramaMovie);
+  borrow2.execute();
+
+  //check history to see if borrows and returns are reflected in history
+  customer.displayHistory();
+
+  //make sure borrows and returns altered stock
+  cout << "Movies in stock after customers transactions:" << endl;
+  cout << " " << comedyMovie.getTitle() << " - Stock: " << comedyMovie.getStock() << endl;
+  cout << " " << dramaMovie.getTitle() << " - Stock: " << dramaMovie.getStock() << endl;
+  assert(comedyMovie.getStock() == 10);
+  assert(dramaMovie.getStock() == 4);
+
+  cout << "All Transaction and Customer tests passed!" << endl;
 
   return 0;
 }
