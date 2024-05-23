@@ -1,5 +1,8 @@
 #include "CustomerManager.h"
 
+using namespace std;
+
+
 void CustomerManager::loadCustomers(const string& filename) {
     string currentLine;
     int ID;
@@ -32,4 +35,22 @@ void CustomerManager::loadCustomers(const string& filename) {
 
     thisFile.close();
 
+}
+
+Customer* CustomerManager::findCustomer(int custID) const{
+    return customerMap.retrieve(custID);
+}
+
+void CustomerManager::displayCustomers() const{
+    customerMap.display();
+}
+
+
+void CustomerManager::addCustomer(int ID, const string &firstName, const string &lastName) {
+    //create a new customer
+    Customer x(ID, firstName, lastName);
+    //make a pointer to it
+    Customer* y = &x;
+    //add it to the customer hash map
+    customerMap.add(y);
 }

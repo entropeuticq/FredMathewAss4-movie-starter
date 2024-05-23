@@ -4,6 +4,7 @@
 #define CUSTOMERMANAGER_H
 
 #include "Customer.h"
+#include "CustomHashMap.h"
 #include <unordered_map>
 #include <string>
 #include <iostream>
@@ -22,8 +23,7 @@ public:
     void displayCustomers() const;
 
 private:
-    //maps for quick searches using customer ID
-    unordered_map<int, Customer*> customerMap;
+    CustomHashMap customerMap;
 
     //add new customer to the system
     void addCustomer(int customerID, const string& firstName, const string& lastName);
