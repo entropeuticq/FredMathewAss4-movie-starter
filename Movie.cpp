@@ -72,6 +72,11 @@ bool Comedy::operator<(const Movie& other) const {
     return title < otherComedy.title || (title == otherComedy.title && year < otherComedy.year);
 }
 
+//returns year
+int Comedy::getYear() const {
+    return year;
+}
+
 //DRAMA
 
 void Drama::display() const {
@@ -115,5 +120,20 @@ bool Classic::operator==(const Movie& other) const {
 bool Classic::operator<(const Movie& other) const {
     const Classic& otherClassic = static_cast<const Classic&>(other);
     return year < otherClassic.year || (year == otherClassic.year && (month < otherClassic.month || (month == otherClassic.month && majorActor < otherClassic.majorActor)));
+}
+
+//returns major actor
+string Classic::getMajorActor() const {
+    return majorActor;
+}
+
+//returns release month
+int Classic::getMonth() const {
+    return month;
+}
+
+//returns release year
+int Classic::getYear() const {
+    return year;
 }
 
