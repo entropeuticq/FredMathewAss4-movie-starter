@@ -5,7 +5,6 @@
 
 #include "Customer.h"
 #include "CustomHashMap.h"
-#include <unordered_map>
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -23,6 +22,7 @@ public:
     void displayCustomers() const;
 
 private:
+    //maps for quick searches using customer ID
     CustomHashMap customerMap;
 
     //add new customer to the system
