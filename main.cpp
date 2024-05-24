@@ -151,7 +151,7 @@ int main() {
   //test invalid movie search
   Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
   assert(notFoundMovie == nullptr);
-
+  
   cout << "All inventory tests have passed!" << endl;
 
   return 0;

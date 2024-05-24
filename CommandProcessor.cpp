@@ -114,18 +114,49 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
     borrowTransaction->execute();
 }
 
-//processing return commands
 void CommandProcessor::processReturnCommand(int customerID, char mediaType, char movieType, const string& attributes) {
+    //validates media type, only one type currently, D for DVD
+    if (mediaType != 'D') {
+        cerr << "Error: Invalid media type " << mediaType << " for borrow command." << endl;
+        return;
+    }
 
+    //finds customer by ID
+    Customer* customer = customerManager.findCustomer(customerID);
+    if (!customer) {
+        //error if customer not found
+        cerr << "Error: customer ID " << customerID << " not found." << endl;
+        return;
+    }
+
+    //finds movie by type and attributes
+    Movie* movie = inventory.findMovie(movieType, attributes);
+    if (!movie) {
+        //error if movie not found
+        cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
+        return;
+    }
+
+    //creates a borrow transaction and executes it
+    Return* returnTransaction = new Return(customer, movie);
+    returnTransaction->execute();
 }
+
 
 //processing inventory display commands
 void CommandProcessor::processInventoryCommand() {
-
+    inventory.display();
 }
 
 //processing history commands
 void CommandProcessor::processHistoryCommand(int customerID) {
-    
+    Customer* customer = customerManager.findCustomer(customerID);
+    if(!customer) {
+        cerr << "Error: customer ID " << customerID << " not found." << endl;
+        return;
+    }
+
+    customer->displayHistory();
 }
+
 
