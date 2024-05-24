@@ -2,8 +2,9 @@
  * Driver for starting movie store tests
  */
 #include "Inventory.h"
-// #include "CustomerManager.h"
-// #include "CommandProcessor.h"
+#include "CustomerManager.h" 
+#include "CommandProcessor.h"
+#include "CustomHashMap.h"
 #include "Movie.h"
 #include "Customer.h"
 #include "Transaction.h"
@@ -151,8 +152,24 @@ int main() {
   //test invalid movie search
   Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
   assert(notFoundMovie == nullptr);
-
+  
   cout << "All inventory tests have passed!" << endl;
+  CustomerManager mang;
+  CustomHashMap map;
+  //constructor/map initialization test
+  assert(map.getSize() == 11);
+  //Test for:
+  //CustomerManager: loadCustomers, findCustomers, addCustomer
+  //CustomerHashMap: add, retrieve, rehash, hash
+  mang.loadCustomers("data4customers.txt");
+  assert(mang.findCustomer(1111) != nullptr && mang.findCustomer(3333) != nullptr && mang.findCustomer(2000) != nullptr); 
+  //bad file test
+  mang.loadCustomers("dfsdf");
+  //Find nonexistant customer test
+  assert(mang.findCustomer(9352) == nullptr);
+  //Display test, check visually
+  mang.displayCustomers();
+  cout << "All CustomHashTable and CustomerManager tests have passed!" << endl;
 
   return 0;
 }
