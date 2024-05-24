@@ -1,7 +1,7 @@
 /**
  * Driver for starting movie store tests
  */
-// #include "Inventory.h"
+#include "Inventory.h"
 // #include "CustomerManager.h"
 // #include "CommandProcessor.h"
 #include "Movie.h"
@@ -9,6 +9,8 @@
 #include "Transaction.h"
 #include <iostream>
 #include <cassert>
+#include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -87,6 +89,70 @@ int main() {
   assert(dramaMovie.getStock() == 4);
 
   cout << "All Transaction and Customer tests passed!" << endl;
+
+  //TEST INVENTORY.CPP
+
+  string filename = "data4movies.txt";
+  ifstream infile(filename);
+  if (!infile.is_open()) {
+    cerr << "Error: could not open file " << filename << endl;
+    return 1;
+  }
+
+  cout << "File " << filename << " opened successfully." << endl;
+
+  //create inventory object
+  Inventory inventory;
+
+  //load movies from file
+  inventory.loadMovies("data4movies.txt");
+
+  //display inventory to visually check the loaded data
+  cout << "Displaying inventory loaded from file: " << endl;
+  inventory.display();
+
+  //add movies directly
+  Comedy* newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
+  Drama* newDrama = new Drama(6, "Martin Scorses", "Goodfellas", 1990);
+  Classic* newClassic = new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
+
+  inventory.addMovie(newComedy);
+  inventory.addMovie(newDrama);
+  inventory.addMovie(newClassic);
+
+  //display inventory to visually check the loaded data
+  cout << "Displaying inventory after adding movies directly: " << endl;
+  inventory.display();
+
+  //find movies tests
+  Movie* foundComedy = inventory.findMovie('F', "Spaceballs 1987");
+  Movie* foundDrama = inventory.findMovie('D', "Martin Scorses Goodfellas");
+  Movie* foundClassic = inventory.findMovie('C', "5 1956 John Wayne");
+
+  //assert that movies were found correctly
+  assert(foundComedy != nullptr);
+  assert(foundDrama != nullptr);
+  assert(foundClassic != nullptr);
+
+  //check attributes of found movies
+  assert(foundComedy->getTitle() == "Spaceballs");
+  assert(static_cast<Comedy*>(foundComedy)->getYear() == 1987);
+  assert(foundDrama->getTitle() == "Goodfellas");
+  assert(static_cast<Drama*>(foundDrama)->getDirector() == "Martin Scorses");
+  assert(foundClassic->getTitle() == "The Searchers");
+  assert(static_cast<Classic*>(foundClassic)->getMajorActor() == "John Wayne");
+  assert(static_cast<Classic*>(foundClassic)->getMonth() == 5);
+  assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
+
+  //test invalid movie types
+  Movie* invalidMovie = inventory.findMovie('X', "Some Invalid Movie");
+  assert(invalidMovie == nullptr);
+
+  //test invalid movie search
+  Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
+  assert(notFoundMovie == nullptr);
+
+  cout << "All inventory tests have passed!" << endl;
 
   return 0;
 }
