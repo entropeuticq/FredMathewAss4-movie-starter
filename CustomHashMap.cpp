@@ -4,8 +4,8 @@ using namespace std;
 
 //Reserves 11 buckets as an initial vector size
 CustomHashMap::CustomHashMap() {
-    map.reserve(11);
-    size = map.size();
+    map.resize(11);
+    size = 11;
 }
 
 int CustomHashMap::getSize() {
@@ -15,8 +15,6 @@ int CustomHashMap::getSize() {
 bool CustomHashMap::add(Customer* cust) {
     int index = hash(cust->getID()); //the hash index
 
-    list<Customer*>::iterator it;
-
     //This for loop checks if the ID is already in the map, if so, it returns false
     for(const auto& customer: map[index]) {
 
@@ -25,8 +23,14 @@ bool CustomHashMap::add(Customer* cust) {
         }
 
     }
-
+    //add customer to the map
     map[index].push_back(cust);
+    //increase total number of customers by 1
+    load++;
+    //rehash if the load is greater than the size
+    if(load > size) {
+        rehash();
+    }
 
     return true;
 }
@@ -48,7 +52,7 @@ void CustomHashMap::display() const{
     for(int i = 0; i < size; i++) {
 
         for(const auto& customer : map[i]) {
-            cout << "ID: " << customer->getID() << "Name: " << customer->getFullName() << endl;
+            cout << "ID: " << customer->getID() << " Name: " << customer->getFullName() << endl;
         }
         
     }
@@ -62,7 +66,8 @@ void CustomHashMap::rehash() {
     size = size + 10; //the size of the new map
 
     //creates a new map with the new size
-    vector<list<Customer*>> newMap(size);
+    vector<list<Customer*>> newMap;
+    newMap.resize(size);
 
     //iterates through the current map and adds all the customers to the new map
     for(int i = 0; i < map.size(); i++) {
@@ -76,5 +81,14 @@ void CustomHashMap::rehash() {
 
     //replaces the old map with the new map
     map = newMap;
+}
 
+CustomHashMap::~CustomHashMap() {
+    for(int i = 0; i < map.size(); i++) {
+
+        for(const auto& customer : map[i]) {
+            delete customer;
+        }
+
+    }
 }

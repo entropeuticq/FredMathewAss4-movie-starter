@@ -5,13 +5,18 @@
 #include <vector>
 #include "Customer.h"
 #include <string>
+#include <queue>
 #include <iostream>
 
 using namespace std;
 
 class CustomHashMap {
 
-public: 
+public:
+CustomHashMap();
+
+~ CustomHashMap();
+
 int getSize();
 
 void display() const;
@@ -25,8 +30,8 @@ void rehash();
 Customer* retrieve(int id) const;
 
 private:
-
-int size;
+int load; //number of customers
+int size; //size of map
 
 vector<list<Customer*>> map;
 

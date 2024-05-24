@@ -48,9 +48,7 @@ void CustomerManager::displayCustomers() const{
 
 void CustomerManager::addCustomer(int ID, const string &firstName, const string &lastName) {
     //create a new customer
-    Customer x(ID, firstName, lastName);
-    //make a pointer to it
-    Customer* y = &x;
+    Customer* x = new Customer(ID, firstName, lastName);
     //add it to the customer hash map
-    customerMap.add(y);
+    customerMap.add(x);
 }
