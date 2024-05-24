@@ -62,6 +62,9 @@ public:
     bool operator==(const Movie& other) const override;
     bool operator<(const Movie& other) const override;
 
+    //returns year of comedy movie
+    int getYear() const;
+
 private:
     //year of release
     int year;
@@ -97,6 +100,15 @@ public:
     bool operator==(const Movie& other) const override;
     bool operator<(const Movie& other) const override;
 
+    //returns major actor of Classic movie
+    string getMajorActor() const;
+
+    //returns release month
+    int getMonth() const;
+
+    //returns release year
+    int getYear() const;
+    
 private:
     //major actors name
     string majorActor;
