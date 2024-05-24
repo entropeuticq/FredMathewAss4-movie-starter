@@ -154,6 +154,60 @@ int main() {
   assert(notFoundMovie == nullptr);
   
   cout << "All inventory tests have passed!" << endl;
+
+  //COMMAND PROCESSOR TESTS
+  //creating sample file for customers
+  ofstream testCustomersFile("test_customers.txt");
+  testCustomersFile << "1234 Doe John\n";
+  testCustomersFile << "5678 Smith Jane\n";
+  testCustomersFile.close();
+
+  //creating sample file for commands
+  ofstream testCommandsFile("test_commands.txt");
+  //display inventory
+  testCommandsFile << "I\n";
+  //1234 borrows comedy movie
+  testCommandsFile << "B 1234 D F The Grand Budapest Hotel, 2014\n";
+  //1234 returns comedy movie
+  testCommandsFile << "R 1234 D F The Grand Budapest Hotel, 2014\n";
+  //display history for customer 1234
+  testCommandsFile << "H 1234\n";
+  //5678 borrows a drama movie
+  testCommandsFile << "B 5678 D D Frank Darabont, The Shawshank Redemption\n";
+  //5678 returns dramam movie
+  testCommandsFile << "R 5678 D D Frank Darabont, The Shawshank Redemption\n";
+  //display history for 5678
+  testCommandsFile << "H 5678\n";
+  testCommandsFile.close();
+
+  //create a customer manager object and load customers
+  CustomerManager testCustomerManager;
+  testCustomerManager.loadCustomers("test_customers.txt");
+
+  //create a command processor object and process commands
+  CommandProcessor testCommandProcessor(inventory, testCustomerManager);
+  testCommandProcessor.processCommands("test_commands.txt");
+
+  //assertions for verifying successful command processing
+  Customer* testCustomer1 = testCustomerManager.findCustomer(1234);
+  Customer* testCustomer2 = testCustomerManager.findCustomer(5678);
+
+  assert(testCustomer1 != nullptr);
+  assert(testCustomer2 != nullptr);
+
+  //testCustomer1 and testCustomer2 history should have 2 entries each
+  cout << "History for customer 1234 should have 2 entries:" << endl;
+  testCustomer1->displayHistory();
+  cout << "History for customer 5678 should have 2 entries:" << endl;
+  testCustomer2->displayHistory();
+
+  //display inventory to check final state
+  inventory.display();
+
+  cout << "All CommandProcessor tests have passed." << endl;
+
+
+
   CustomerManager mang;
   CustomHashMap map;
   //constructor/map initialization test
