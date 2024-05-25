@@ -179,7 +179,7 @@ int main() {
   //display history for 5678
   testCommandsFile << "H 5678\n";
   testCommandsFile.close();
-
+ 
   //create a customer manager object and load customers
   CustomerManager testCustomerManager;
   testCustomerManager.loadCustomers("test_customers.txt");
