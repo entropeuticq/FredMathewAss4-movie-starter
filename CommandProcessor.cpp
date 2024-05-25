@@ -18,6 +18,9 @@ void CommandProcessor::processCommands(const string& filename) {
     while (getline(infile, line)) {
         //process lines when theyre not empty
         if (!line.empty()) {
+            //debug statement
+            cout << "Processing command: " << line << endl;
+            
             processCommandString(line);
         }
     }

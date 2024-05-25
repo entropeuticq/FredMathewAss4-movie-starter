@@ -4,41 +4,29 @@ using namespace std;
 
 
 void CustomerManager::loadCustomers(const string& filename) {
-    string currentLine;
-    int ID;
-    string firstName;
-    string lastName;
-
-    ifstream thisFile(filename);
-
-    if (!thisFile.is_open()) {
+    ifstream infile(filename);
+    if (!infile.is_open()) {
         cerr << "Couldn't open " << filename << endl;
         return;
     }
 
-    // Read the first line separately
-    getline(thisFile, currentLine);
-    stringstream lineStream(currentLine); // Create a stringstream for parsing
-    
-    // Parse the first line to get data
-    // Need this here because the loop was not reading first line because of the getline break condition
-    lineStream >> ID >> lastName >> firstName;
-    addCustomer(ID, firstName, lastName);
-
-    // Now iterate through the rest of the file
-    while (getline(thisFile, currentLine)) {
-        lineStream.clear(); // Clear any flags from previous parsing
-        lineStream.str(currentLine); // Set the stringstream to the new line
-        lineStream >> ID >> lastName >> firstName;
-        addCustomer(ID, firstName, lastName);
+    string currentLine;
+    while (getline(infile, currentLine)) {
+        if (!currentLine.empty()) {
+            stringstream lineStream(currentLine);
+            int ID;
+            string lastName, firstName;
+            lineStream >> ID >> lastName >> firstName;
+            addCustomer(ID, firstName, lastName);
+            cout << "Loaded customer: ID=" << ID << ", LastName=" << lastName << ", FirstName=" << firstName << endl;
+        }
     }
-
-    thisFile.close();
-
 }
 
 Customer* CustomerManager::findCustomer(int custID) const{
-    return customerMap.retrieve(custID);
+    Customer* customer = customerMap.retrieve(custID);
+    cout << "Find customer with ID: " << custID << (customer ? " - Found" : " - Not Found") << endl;
+    return customer;
 }
 
 void CustomerManager::displayCustomers() const{
@@ -51,4 +39,5 @@ void CustomerManager::addCustomer(int ID, const string &firstName, const string 
     Customer* x = new Customer(ID, firstName, lastName);
     //add it to the customer hash map
     customerMap.add(x);
+    cout << "Added customer: ID=" << ID << ", LastName=" << lastName << ", FirstName=" << firstName << endl;
 }

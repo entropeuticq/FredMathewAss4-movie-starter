@@ -27,6 +27,10 @@ bool CustomHashMap::add(Customer* cust) {
     map[index].push_back(cust);
     //increase total number of customers by 1
     load++;
+
+    //debug statement
+    cout << "Added customer with ID: " << cust->getID() << " to bucket: " << index << endl;
+
     //rehash if the load is greater than the size
     if(load > size) {
         rehash();
@@ -42,9 +46,14 @@ int CustomHashMap::hash(int custID) const{
 Customer* CustomHashMap::retrieve(int custID) const{
     int bucket = hash(custID);
     for(const auto& customer : map[bucket]) {
-        if(customer->getID() == custID)
+        if(customer->getID() == custID) {
+            //debug statement
+            cout << "Customer found with ID: " << custID << " in bucket: " << bucket << endl;
             return customer;
+        }
     }
+    //debug statement
+    cout << "Customer not found with ID: " << custID << endl;
     return nullptr;
 }
 
@@ -68,9 +77,9 @@ void CustomHashMap::rehash() {
     //creates a new map with the new size
     vector<list<Customer*>> newMap;
     newMap.resize(size);
-
+    
     //iterates through the current map and adds all the customers to the new map
-    for(int i = 0; i < map.size(); i++) {
+    for(int i = 0; i < oldSize; i++) {
 
         for(const auto& customer : map[i]) {
             index = hash(customer->getID());
@@ -79,6 +88,8 @@ void CustomHashMap::rehash() {
 
     }
 
+    //debug statement
+    cout << "Rehashed from size " << oldSize << " to new size " << size << endl;
     //replaces the old map with the new map
     map = newMap;
 }

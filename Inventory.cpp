@@ -144,6 +144,10 @@ void Inventory::loadMovies(const string& filename) {
             cerr << "Invalid movie type in file: " << type << endl;
         }
     }
+
+    //debug statement
+    cout << "Inventory after loading movies:" << endl;
+    display();
 }
 
 //add movie to inventory
@@ -210,12 +214,10 @@ Movie* Inventory::findMovie(char type, const string& attributes) const {
 
     //debug statement
     cout << "Parsed attributes into key: " << key << endl;
+    cout << "Searching for key: " << key << " in map of type: " << type << endl;
 
     //finds the movie in the map
     auto it = movieMap->find(key);
-
-    //debug statement
-    cout << "Searching for key: " << key << " in map of type: " << type << endl;
 
     //returns found movie or nullptr if not found
     if (it != movieMap->end()) {

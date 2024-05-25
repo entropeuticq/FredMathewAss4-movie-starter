@@ -21,6 +21,10 @@ public:
     //function to process commands from given files
     void processCommands(const string& filename);
 
+    //process command strings
+    void processCommandString(const string& command);
+
+
 private:
     Inventory& inventory;
     CustomerManager& customerManager;
@@ -37,8 +41,6 @@ private:
     //execute transaction history command
     void processHistoryCommand(int customerID);
 
-    //process command strings
-    void processCommandString(const string& command);
 
 };
 #endif

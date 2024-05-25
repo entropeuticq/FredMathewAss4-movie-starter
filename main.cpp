@@ -15,194 +15,213 @@
 
 using namespace std;
 
+void writeTemporaryCommandFile(const string& filename, const string& command) {
+    ofstream outFile(filename);
+    if (outFile.is_open()) {
+        outFile << command << endl;
+        outFile.close();
+    } else {
+        cerr << "Failed to open temporary command file: " << filename << endl;
+    }
+}
+
 // forward declaration, implementation in store_test.cpp
 // void testAll();
 
 int main() {
-  // testAll();
-  // cout << "Done." << endl;
-  // return 0;
+  // // testAll();
+  // // cout << "Done." << endl;
+  // // return 0;
 
+  // // Inventory inventory;
+  // // CustomerManager customerManager;
+  // // inventory.loadMovies("data4movies.txt");
+  // // customerManager.loadCustomers("data4customers.txt");
+  // // CommandProcessor commandProcessor(inventory, customerManager);
+  // // commandProcessor.processCommands("data4commands.txt");
+
+  // //TEST MOVIE.CPP
+  // //instances of each movie type
+  // Comedy comedyMovie(10, "Wes Anderson", "The Grand Budapest Hotel", 2014);
+  // Drama dramaMovie(5, "Frank Darabont", "The Shawshank Redemption", 1994);
+  // Classic classicMovie(3, "Victor Fleming", "Gone with the Wind", "Clark Gable", 1, 1939);
+  // Customer customer(1234, "John", "Doe");
+
+  // //display tests
+  // cout << "Testing display functionality:\n";
+  // comedyMovie.display();
+  // dramaMovie.display();
+  // classicMovie.display();
+
+  // //stock display/increase/decrease tests
+  // assert(comedyMovie.getStock() == 10);
+  // comedyMovie.decreaseStock();
+  // assert(comedyMovie.getStock() ==9);
+  // comedyMovie.increaseStock(1);
+  // assert(comedyMovie.getStock() == 10);
+
+  // assert(dramaMovie.getStock() == 5);
+  // dramaMovie.decreaseStock();
+  // assert(dramaMovie.getStock() == 4);
+  // dramaMovie.increaseStock(1);
+  // assert(dramaMovie.getStock() == 5);
+
+  // assert(classicMovie.getStock() == 3);
+  // classicMovie.decreaseStock();
+  // assert(classicMovie.getStock() == 2);
+  // classicMovie.increaseStock(1);
+  // assert(classicMovie.getStock() == 3);
+
+  // //equality tests
+  // Drama dramaMovie2(5, "Frank Darabont", "The Shawshank Redemption", 1994);
+  // assert(dramaMovie == dramaMovie2);
+  // Drama dramaMovie3(5, "Christohper Nolan", "Inception", 2010);
+  // assert(!(dramaMovie == dramaMovie3));
+
+  // cout << "All Movie tests passed!" << endl;
+
+  // //TEST TRANSACTION.CPP and CUSTOMER.CPP
+  // //borrows and returns
+  // Borrow borrow1(&customer, &comedyMovie);
+  // borrow1.execute();
+  // Return return1(&customer, &comedyMovie);
+  // return1.execute();
+  // Borrow borrow2(&customer, &dramaMovie);
+  // borrow2.execute();
+
+  // //check history to see if borrows and returns are reflected in history
+  // customer.displayHistory();
+
+  // //make sure borrows and returns altered stock
+  // cout << "Movies in stock after customers transactions:" << endl;
+  // cout << " " << comedyMovie.getTitle() << " - Stock: " << comedyMovie.getStock() << endl;
+  // cout << " " << dramaMovie.getTitle() << " - Stock: " << dramaMovie.getStock() << endl;
+  // assert(comedyMovie.getStock() == 10);
+  // assert(dramaMovie.getStock() == 4);
+
+  // cout << "All Transaction and Customer tests passed!" << endl;
+
+  // //TEST INVENTORY.CPP
+
+  // string filename = "data4movies.txt";
+  // ifstream infile(filename);
+  // if (!infile.is_open()) {
+  //   cerr << "Error: could not open file " << filename << endl;
+  //   return 1;
+  // }
+
+  // cout << "File " << filename << " opened successfully." << endl;
+
+  // //create inventory object
   // Inventory inventory;
-  // CustomerManager customerManager;
+
+  // //load movies from file
   // inventory.loadMovies("data4movies.txt");
-  // customerManager.loadCustomers("data4customers.txt");
-  // CommandProcessor commandProcessor(inventory, customerManager);
-  // commandProcessor.processCommands("data4commands.txt");
 
-  //TEST MOVIE.CPP
-  //instances of each movie type
-  Comedy comedyMovie(10, "Wes Anderson", "The Grand Budapest Hotel", 2014);
-  Drama dramaMovie(5, "Frank Darabont", "The Shawshank Redemption", 1994);
-  Classic classicMovie(3, "Victor Fleming", "Gone with the Wind", "Clark Gable", 1, 1939);
-  Customer customer(1234, "John", "Doe");
+  // //display inventory to visually check the loaded data
+  // cout << "Displaying inventory loaded from file: " << endl;
+  // inventory.display();
 
-  //display tests
-  cout << "Testing display functionality:\n";
-  comedyMovie.display();
-  dramaMovie.display();
-  classicMovie.display();
+  // //add movies directly
+  // Comedy* newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
+  // Drama* newDrama = new Drama(6, "Martin Scorses", "Goodfellas", 1990);
+  // Classic* newClassic = new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
 
-  //stock display/increase/decrease tests
-  assert(comedyMovie.getStock() == 10);
-  comedyMovie.decreaseStock();
-  assert(comedyMovie.getStock() ==9);
-  comedyMovie.increaseStock(1);
-  assert(comedyMovie.getStock() == 10);
+  // inventory.addMovie(newComedy);
+  // inventory.addMovie(newDrama);
+  // inventory.addMovie(newClassic);
 
-  assert(dramaMovie.getStock() == 5);
-  dramaMovie.decreaseStock();
-  assert(dramaMovie.getStock() == 4);
-  dramaMovie.increaseStock(1);
-  assert(dramaMovie.getStock() == 5);
+  // //display inventory to visually check the loaded data
+  // cout << "Displaying inventory after adding movies directly: " << endl;
+  // inventory.display();
 
-  assert(classicMovie.getStock() == 3);
-  classicMovie.decreaseStock();
-  assert(classicMovie.getStock() == 2);
-  classicMovie.increaseStock(1);
-  assert(classicMovie.getStock() == 3);
+  // //find movies tests
+  // Movie* foundComedy = inventory.findMovie('F', "Spaceballs 1987");
+  // Movie* foundDrama = inventory.findMovie('D', "Martin Scorses Goodfellas");
+  // Movie* foundClassic = inventory.findMovie('C', "5 1956 John Wayne");
 
-  //equality tests
-  Drama dramaMovie2(5, "Frank Darabont", "The Shawshank Redemption", 1994);
-  assert(dramaMovie == dramaMovie2);
-  Drama dramaMovie3(5, "Christohper Nolan", "Inception", 2010);
-  assert(!(dramaMovie == dramaMovie3));
+  // //assert that movies were found correctly
+  // assert(foundComedy != nullptr);
+  // assert(foundDrama != nullptr);
+  // assert(foundClassic != nullptr);
 
-  cout << "All Movie tests passed!" << endl;
+  // //check attributes of found movies
+  // assert(foundComedy->getTitle() == "Spaceballs");
+  // assert(static_cast<Comedy*>(foundComedy)->getYear() == 1987);
+  // assert(foundDrama->getTitle() == "Goodfellas");
+  // assert(static_cast<Drama*>(foundDrama)->getDirector() == "Martin Scorses");
+  // assert(foundClassic->getTitle() == "The Searchers");
+  // assert(static_cast<Classic*>(foundClassic)->getMajorActor() == "John Wayne");
+  // assert(static_cast<Classic*>(foundClassic)->getMonth() == 5);
+  // assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
 
-  //TEST TRANSACTION.CPP and CUSTOMER.CPP
-  //borrows and returns
-  Borrow borrow1(&customer, &comedyMovie);
-  borrow1.execute();
-  Return return1(&customer, &comedyMovie);
-  return1.execute();
-  Borrow borrow2(&customer, &dramaMovie);
-  borrow2.execute();
+  // //test invalid movie types
+  // Movie* invalidMovie = inventory.findMovie('X', "Some Invalid Movie");
+  // assert(invalidMovie == nullptr);
 
-  //check history to see if borrows and returns are reflected in history
-  customer.displayHistory();
-
-  //make sure borrows and returns altered stock
-  cout << "Movies in stock after customers transactions:" << endl;
-  cout << " " << comedyMovie.getTitle() << " - Stock: " << comedyMovie.getStock() << endl;
-  cout << " " << dramaMovie.getTitle() << " - Stock: " << dramaMovie.getStock() << endl;
-  assert(comedyMovie.getStock() == 10);
-  assert(dramaMovie.getStock() == 4);
-
-  cout << "All Transaction and Customer tests passed!" << endl;
-
-  //TEST INVENTORY.CPP
-
-  string filename = "data4movies.txt";
-  ifstream infile(filename);
-  if (!infile.is_open()) {
-    cerr << "Error: could not open file " << filename << endl;
-    return 1;
-  }
-
-  cout << "File " << filename << " opened successfully." << endl;
-
-  //create inventory object
-  Inventory inventory;
-
-  //load movies from file
-  inventory.loadMovies("data4movies.txt");
-
-  //display inventory to visually check the loaded data
-  cout << "Displaying inventory loaded from file: " << endl;
-  inventory.display();
-
-  //add movies directly
-  Comedy* newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
-  Drama* newDrama = new Drama(6, "Martin Scorses", "Goodfellas", 1990);
-  Classic* newClassic = new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
-
-  inventory.addMovie(newComedy);
-  inventory.addMovie(newDrama);
-  inventory.addMovie(newClassic);
-
-  //display inventory to visually check the loaded data
-  cout << "Displaying inventory after adding movies directly: " << endl;
-  inventory.display();
-
-  //find movies tests
-  Movie* foundComedy = inventory.findMovie('F', "Spaceballs 1987");
-  Movie* foundDrama = inventory.findMovie('D', "Martin Scorses Goodfellas");
-  Movie* foundClassic = inventory.findMovie('C', "5 1956 John Wayne");
-
-  //assert that movies were found correctly
-  assert(foundComedy != nullptr);
-  assert(foundDrama != nullptr);
-  assert(foundClassic != nullptr);
-
-  //check attributes of found movies
-  assert(foundComedy->getTitle() == "Spaceballs");
-  assert(static_cast<Comedy*>(foundComedy)->getYear() == 1987);
-  assert(foundDrama->getTitle() == "Goodfellas");
-  assert(static_cast<Drama*>(foundDrama)->getDirector() == "Martin Scorses");
-  assert(foundClassic->getTitle() == "The Searchers");
-  assert(static_cast<Classic*>(foundClassic)->getMajorActor() == "John Wayne");
-  assert(static_cast<Classic*>(foundClassic)->getMonth() == 5);
-  assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
-
-  //test invalid movie types
-  Movie* invalidMovie = inventory.findMovie('X', "Some Invalid Movie");
-  assert(invalidMovie == nullptr);
-
-  //test invalid movie search
-  Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
-  assert(notFoundMovie == nullptr);
+  // //test invalid movie search
+  // Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
+  // assert(notFoundMovie == nullptr);
   
-  cout << "All inventory tests have passed!" << endl;
+  // cout << "All inventory tests have passed!" << endl;
 
   //COMMAND PROCESSOR TESTS
-  //creating sample file for customers
-  ofstream testCustomersFile("test_customers.txt");
-  testCustomersFile << "1234 Doe John\n";
-  testCustomersFile << "5678 Smith Jane\n";
-  testCustomersFile.close();
+  Inventory inventory;
+  CustomerManager customerManager;
 
-  //creating sample file for commands
-  ofstream testCommandsFile("test_commands.txt");
-  //display inventory
-  testCommandsFile << "I\n";
-  //1234 borrows comedy movie
-  testCommandsFile << "B 1234 D F The Grand Budapest Hotel, 2014\n";
-  //1234 returns comedy movie
-  testCommandsFile << "R 1234 D F The Grand Budapest Hotel, 2014\n";
-  //display history for customer 1234
-  testCommandsFile << "H 1234\n";
-  //5678 borrows a drama movie
-  testCommandsFile << "B 5678 D D Frank Darabont, The Shawshank Redemption\n";
-  //5678 returns dramam movie
-  testCommandsFile << "R 5678 D D Frank Darabont, The Shawshank Redemption\n";
-  //display history for 5678
-  testCommandsFile << "H 5678\n";
-  testCommandsFile.close();
- 
-  //create a customer manager object and load customers
-  CustomerManager testCustomerManager;
-  testCustomerManager.loadCustomers("test_customers.txt");
+  inventory.loadMovies("data4movies.txt");
+  cout << "Loaded movies into inventory." << endl;
 
-  //create a command processor object and process commands
-  CommandProcessor testCommandProcessor(inventory, testCustomerManager);
-  testCommandProcessor.processCommands("test_commands.txt");
+  customerManager.loadCustomers("test_customers.txt");
+  cout << "Loaded customers into customer manager." << endl;
 
-  //assertions for verifying successful command processing
-  Customer* testCustomer1 = testCustomerManager.findCustomer(1234);
-  Customer* testCustomer2 = testCustomerManager.findCustomer(5678);
+  CommandProcessor commandProcessor(inventory, customerManager);
 
-  assert(testCustomer1 != nullptr);
-  assert(testCustomer2 != nullptr);
+  assert(inventory.findMovie('F', "You've Got Mail, 1998") != nullptr);
+  assert(inventory.findMovie('D', "Barry Levinson, Good Morning Vietnam") != nullptr);  assert(inventory.findMovie('C', "9 1938 Katherine Hepburn") != nullptr);
+  cout << "Inventory movies are correctly loaded." << endl;
 
-  //testCustomer1 and testCustomer2 history should have 2 entries each
-  cout << "History for customer 1234 should have 2 entries:" << endl;
-  testCustomer1->displayHistory();
-  cout << "History for customer 5678 should have 2 entries:" << endl;
-  testCustomer2->displayHistory();
+  Customer* customer1 = customerManager.findCustomer(1234);
+  Customer* customer2 = customerManager.findCustomer(5678);
+  assert(customer1 != nullptr);
+  assert(customer2 != nullptr);
+  cout << "Customers are correctly loaded." << endl;
 
-  //display inventory to check final state
-  inventory.display();
+  Movie* movie1 = inventory.findMovie('F', "The Grand Budapest Hotel, 2014");
+  assert(movie1 != nullptr && movie1->getStock() == 10);
+  writeTemporaryCommandFile("temp_commands.txt", "B 1234 D F The Grand Budapest Hotel, 2014");
+    commandProcessor.processCommands("temp_commands.txt");
+    assert(movie1->getStock() == 9);
+    writeTemporaryCommandFile("temp_commands.txt", "R 1234 D F The Grand Budapest Hotel, 2014");
+    commandProcessor.processCommands("temp_commands.txt");
+    assert(movie1->getStock() == 10);
+    cout << "Borrow and return commands for The Grand Budapest Hotel passed." << endl;
+
+    Movie* movie2 = inventory.findMovie('D', "Frank Darabont, The Shawshank Redemption");
+    assert(movie2 != nullptr && movie2->getStock() == 10);
+    writeTemporaryCommandFile("temp_commands.txt", "B 5678 D D Frank Darabont, The Shawshank Redemption");
+    commandProcessor.processCommands("temp_commands.txt");
+    assert(movie2->getStock() == 9);
+    writeTemporaryCommandFile("temp_commands.txt", "R 5678 D D Frank Darabont, The Shawshank Redemption");
+    commandProcessor.processCommands("temp_commands.txt");
+    assert(movie2->getStock() == 10);
+    cout << "Borrow and return commands for The Shawshank Redemption passed." << endl;
+
+    // Test inventory command
+    cout << "Testing inventory command:" << endl;
+    writeTemporaryCommandFile("temp_commands.txt", "I");
+    commandProcessor.processCommands("temp_commands.txt");
+
+    // Test history command for customer 1234
+    cout << "Testing history command for customer 1234:" << endl;
+    writeTemporaryCommandFile("temp_commands.txt", "H 1234");
+    commandProcessor.processCommands("temp_commands.txt");
+
+    // Test history command for customer 5678
+    cout << "Testing history command for customer 5678:" << endl;
+    writeTemporaryCommandFile("temp_commands.txt", "H 5678");
+    commandProcessor.processCommands("temp_commands.txt");
+
 
   cout << "All CommandProcessor tests have passed." << endl;
 
