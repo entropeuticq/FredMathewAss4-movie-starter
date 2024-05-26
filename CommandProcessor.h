@@ -24,6 +24,8 @@ public:
     //process command strings
     void processCommandString(const string& command);
 
+    string removeCommasAndLeadingSpace(string str);
+
 
 private:
     Inventory& inventory;

@@ -20,7 +20,7 @@ void CommandProcessor::processCommands(const string& filename) {
         if (!line.empty()) {
             //debug statement
             cout << "Processing command: " << line << endl;
-            
+
             processCommandString(line);
         }
     }
@@ -47,7 +47,7 @@ void CommandProcessor::processCommandString(const string& command) {
             //read the rest of the line as attributes
             string attributes;
             getline(iss, attributes);
-
+            attributes = removeCommasAndLeadingSpace(attributes);
             //processing borrow command
             processBorrowCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -62,7 +62,7 @@ void CommandProcessor::processCommandString(const string& command) {
             //reading rest of line as attributes
             string attributes;
             getline(iss, attributes);
-
+            attributes = removeCommasAndLeadingSpace(attributes);
             //process return command
             processReturnCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -174,4 +174,15 @@ void CommandProcessor::processHistoryCommand(int customerID) {
     customer->displayHistory();
 }
 
+string CommandProcessor::removeCommasAndLeadingSpace(string str) {
+    string attributesNoCommas = "";
+    string attributesNoCommasOrLeadingSpace = "";
+    for(const auto &attribute: str) {
+        if(attribute != ',') {
+            attributesNoCommas += attribute;
+        }
+    }
+    attributesNoCommasOrLeadingSpace = attributesNoCommas.substr(1, attributesNoCommas.size());
+    return attributesNoCommasOrLeadingSpace;
+}
 
