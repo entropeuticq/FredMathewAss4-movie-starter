@@ -40,11 +40,11 @@ void CommandProcessor::processCommandString(const string& command) {
             char mediaType;
             char movieType;
             iss >> customerID >> mediaType >> movieType;
-
             //read the rest of the line as attributes
             string attributes;
-            getline(iss, attributes);
 
+            getline(iss, attributes);
+            attributes = removeCommasAndLeadingSpace(attributes);
             //processing borrow command
             processBorrowCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -58,8 +58,10 @@ void CommandProcessor::processCommandString(const string& command) {
 
             //reading rest of line as attributes
             string attributes;
-            getline(iss, attributes);
 
+            getline(iss, attributes);
+            attributes = removeCommasAndLeadingSpace(attributes);
+            
             //process return command
             processReturnCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -100,7 +102,8 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
         cerr << "Error: customer ID " << customerID << " not found." << endl;
         return;
     }
-
+    
+    
     //finds movie by type and attributes
     Movie* movie = inventory.findMovie(movieType, attributes);
     if (!movie) {
@@ -157,6 +160,18 @@ void CommandProcessor::processHistoryCommand(int customerID) {
     }
 
     customer->displayHistory();
+}
+
+string CommandProcessor::removeCommasAndLeadingSpace(string str) {
+    string attributesNoCommas = "";
+    string attributesNoCommasOrLeadingSpace = "";
+    for(const auto &attribute: str) {
+        if(attribute != ',') {
+            attributesNoCommas += attribute;
+        }
+    }
+    attributesNoCommasOrLeadingSpace = attributesNoCommas.substr(1, attributesNoCommas.size());
+    return attributesNoCommasOrLeadingSpace;
 }
 
 

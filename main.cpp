@@ -19,17 +19,19 @@ using namespace std;
 // void testAll();
 
 int main() {
-  // testAll();
-  // cout << "Done." << endl;
-  // return 0;
+   //testAll();
+   //cout << "Done." << endl;
+   //return 0;
 
-  // Inventory inventory;
-  // CustomerManager customerManager;
-  // inventory.loadMovies("data4movies.txt");
-  // customerManager.loadCustomers("data4customers.txt");
-  // CommandProcessor commandProcessor(inventory, customerManager);
-  // commandProcessor.processCommands("data4commands.txt");
-
+   Inventory inventory;
+   CustomerManager customerManager;
+   inventory.loadMovies("data4movies.txt");
+   inventory.display();
+   customerManager.loadCustomers("data4customers.txt");
+   CommandProcessor commandProcessor(inventory, customerManager);
+   //commandProcessor.processCommands("data4commands.txt");
+   commandProcessor.processCommands("data4commands.txt");
+/*
   //TEST MOVIE.CPP
   //instances of each movie type
   Comedy comedyMovie(10, "Wes Anderson", "The Grand Budapest Hotel", 2014);
@@ -103,32 +105,32 @@ int main() {
   cout << "File " << filename << " opened successfully." << endl;
 
   //create inventory object
-  Inventory inventory;
+  Inventory inventory1;
 
   //load movies from file
-  inventory.loadMovies("data4movies.txt");
+  inventory1.loadMovies("data4movies.txt");
 
   //display inventory to visually check the loaded data
   cout << "Displaying inventory loaded from file: " << endl;
-  inventory.display();
+  inventory1.display();
 
   //add movies directly
   Comedy* newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
   Drama* newDrama = new Drama(6, "Martin Scorses", "Goodfellas", 1990);
   Classic* newClassic = new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
 
-  inventory.addMovie(newComedy);
-  inventory.addMovie(newDrama);
-  inventory.addMovie(newClassic);
+  inventory1.addMovie(newComedy);
+  inventory1.addMovie(newDrama);
+  inventory1.addMovie(newClassic);
 
   //display inventory to visually check the loaded data
   cout << "Displaying inventory after adding movies directly: " << endl;
-  inventory.display();
+  inventory1.display();
 
   //find movies tests
-  Movie* foundComedy = inventory.findMovie('F', "Spaceballs 1987");
-  Movie* foundDrama = inventory.findMovie('D', "Martin Scorses Goodfellas");
-  Movie* foundClassic = inventory.findMovie('C', "5 1956 John Wayne");
+  Movie* foundComedy = inventory1.findMovie('F', "Spaceballs 1987");
+  Movie* foundDrama = inventory1.findMovie('D', "Martin Scorses Goodfellas");
+  Movie* foundClassic = inventory1.findMovie('C', "5 1956 John Wayne");
 
   //assert that movies were found correctly
   assert(foundComedy != nullptr);
@@ -146,11 +148,11 @@ int main() {
   assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
 
   //test invalid movie types
-  Movie* invalidMovie = inventory.findMovie('X', "Some Invalid Movie");
+  Movie* invalidMovie = inventory1.findMovie('X', "Some Invalid Movie");
   assert(invalidMovie == nullptr);
 
   //test invalid movie search
-  Movie* notFoundMovie = inventory.findMovie('F', "Non Existent Movie 2024");
+  Movie* notFoundMovie = inventory1.findMovie('F', "Non Existent Movie 2024");
   assert(notFoundMovie == nullptr);
   
   cout << "All inventory tests have passed!" << endl;
@@ -170,7 +172,7 @@ int main() {
   //Display test, check visually
   mang.displayCustomers();
   cout << "All CustomHashTable and CustomerManager tests have passed!" << endl;
-
+*/
   return 0;
 }
 

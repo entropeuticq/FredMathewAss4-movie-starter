@@ -40,6 +40,8 @@ private:
     //process command strings
     void processCommandString(const string& command);
 
+    string removeCommasAndLeadingSpace(string str);
+
 };
 #endif
 
