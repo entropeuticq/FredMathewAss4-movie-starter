@@ -177,8 +177,9 @@ int main() {
 
   CommandProcessor commandProcessor(inventory, customerManager);
 
-  assert(inventory.findMovie('F', "You've Got Mail, 1998") != nullptr);
-  assert(inventory.findMovie('D', "Barry Levinson, Good Morning Vietnam") != nullptr);  assert(inventory.findMovie('C', "9 1938 Katherine Hepburn") != nullptr);
+  assert(inventory.findMovie('F', "You've Got Mail 1998") != nullptr);
+  assert(inventory.findMovie('D', "Barry Levinson Good Morning Vietnam") != nullptr);  
+  assert(inventory.findMovie('C', "9 1938 Katherine Hepburn") != nullptr);
   cout << "Inventory movies are correctly loaded." << endl;
 
   Customer* customer1 = customerManager.findCustomer(1234);
@@ -187,22 +188,22 @@ int main() {
   assert(customer2 != nullptr);
   cout << "Customers are correctly loaded." << endl;
 
-  Movie* movie1 = inventory.findMovie('F', "The Grand Budapest Hotel, 2014");
+  Movie* movie1 = inventory.findMovie('F', "The Grand Budapest Hotel 2014");
   assert(movie1 != nullptr && movie1->getStock() == 10);
-  writeTemporaryCommandFile("temp_commands.txt", "B 1234 D F The Grand Budapest Hotel, 2014");
+  writeTemporaryCommandFile("temp_commands.txt", "B 1234 D F The Grand Budapest Hotel 2014");
     commandProcessor.processCommands("temp_commands.txt");
     assert(movie1->getStock() == 9);
-    writeTemporaryCommandFile("temp_commands.txt", "R 1234 D F The Grand Budapest Hotel, 2014");
+    writeTemporaryCommandFile("temp_commands.txt", "R 1234 D F The Grand Budapest Hotel 2014");
     commandProcessor.processCommands("temp_commands.txt");
     assert(movie1->getStock() == 10);
     cout << "Borrow and return commands for The Grand Budapest Hotel passed." << endl;
 
-    Movie* movie2 = inventory.findMovie('D', "Frank Darabont, The Shawshank Redemption");
+    Movie* movie2 = inventory.findMovie('D', "Frank Darabont The Shawshank Redemption");
     assert(movie2 != nullptr && movie2->getStock() == 10);
-    writeTemporaryCommandFile("temp_commands.txt", "B 5678 D D Frank Darabont, The Shawshank Redemption");
+    writeTemporaryCommandFile("temp_commands.txt", "B 5678 D D Frank Darabont The Shawshank Redemption");
     commandProcessor.processCommands("temp_commands.txt");
     assert(movie2->getStock() == 9);
-    writeTemporaryCommandFile("temp_commands.txt", "R 5678 D D Frank Darabont, The Shawshank Redemption");
+    writeTemporaryCommandFile("temp_commands.txt", "R 5678 D D Frank Darabont The Shawshank Redemption");
     commandProcessor.processCommands("temp_commands.txt");
     assert(movie2->getStock() == 10);
     cout << "Borrow and return commands for The Shawshank Redemption passed." << endl;
