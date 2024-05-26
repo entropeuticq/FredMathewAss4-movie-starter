@@ -23,14 +23,12 @@ int main() {
    //cout << "Done." << endl;
    //return 0;
 
-   Inventory inventory;
-   CustomerManager customerManager;
-   inventory.loadMovies("data4movies.txt");
-   inventory.display();
-   customerManager.loadCustomers("data4customers.txt");
-   CommandProcessor commandProcessor(inventory, customerManager);
-   //commandProcessor.processCommands("data4commands.txt");
-   commandProcessor.processCommands("data4commands.txt");
+  Inventory inventory;
+  CustomerManager customerManager;
+  inventory.loadMovies("data4movies.txt");
+  customerManager.loadCustomers("data4customers.txt");
+  CommandProcessor commandProcessor(inventory, customerManager);
+  commandProcessor.processCommands("data4commands.txt");
 /*
   //TEST MOVIE.CPP
   //instances of each movie type
