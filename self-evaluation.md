@@ -61,29 +61,69 @@ Q: Are all functions in .h and .cpp file documents (min -3): 0
 
 State the file and function where the information can be found
 
-invalid command code: CommandProcessor::processCommandString
+invalid command code: file : CommandProcessor.cpp
+function: void CommandProcessor::processCommandString (const string& command)
+location : default case in switch statements
 
-invalid movie type: Inventory::addMovie
+invalid movie type: file : Inventory.cpp
+functions : void Inventory::addMovie(Movie* movie) {
 
-invalid customer ID: CustomHashMap::retrieve, CommandProcessor::processBorrowCommand, CommandProcessor::processReturnCommand, CommandProcessor::processHistoryCommand
+Movie* Inventory::findMovie(char type, const string& attributes) const {
+
+void Inventory::loadMovies(const string& filename) {
+
+
+
+invalid customer ID: file : CustomHashMap.cpp
+functions : CustomHashMap::retrieve
+file : CommandProcessor.cpp
+functions : CommandProcessor::processBorrowCommand, CommandProcessor::processReturnCommand, 
+CommandProcessor::processHistoryCommand
  
-invalid movie: CommandProcessor::processBorrowCommand, CommandProcessor::processReturnCommand
+invalid movie: file : CommandProcessor.cpp
+functions : CommandProcessor::processBorrowCommand, 
+CommandProcessor::processReturnCommand
 
 factory classes: CustomerManager, Inventory
 
-hashtable: Hashtable is used to store the customers
+hashtable: Hashtable is used to store and manage the customer objects. 
 
-container used for comedy movies: map<string, Movie*> comedyMap //within inventory
+container used for comedy movies: map<string, Movie*> comedyMap //Within inventory.h
 
-function for sorting comedy movies: TODO(student)
+function for sorting comedy movies: file : Movie.h
+function :     bool operator==(const Movie& other) const override;
+    bool operator<(const Movie& other) const override;
 
-function where comedy movies are sorted: TODO(student)
+function where comedy movies are sorted: file : Inventory.cpp
+function : void Inventory::addMovieToMap(Movie* movie, map<string, Movie*>& moviemap, const string& key) {
+(When a comedy movie is added to the comedyMap, it is inserted in a sorted manner according to the key generated from its title and year.)
 
-functions called when retrieving a comedy movie based on title and year: TODO(student)
+functions called when retrieving a comedy movie based on title and year: file : Inventory.cpp
+functions : Movie* Inventory::findMovie(char type, const string& attributes) const {
 
-functions called for retrieving and printing customer history: TODO(student)
+string Inventory::parseAttributes(char type, const string& attributes) const {
 
-container used for customer history: Customer::vector<const Transaction*> transactions
+find(key);
+getline(iss, majorActor);
+majorActor.erase(0, majorActor.find_first_not_of(" \t"));
+majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
+return to_string(year) + " " + to_string(month) + " " + majorActor;
+
+
+
+
+functions called for retrieving and printing customer history: file : Customer.cpp
+functions : void Customer::displayHistory() const {
+
+string Customer::getFullName() const {
+
+void Borrow::display() const {
+
+void Return::display() const {
+
+
+container used for customer history: file : Customer.h
+vector<const Transaction*> transactions
 
 functions called when borrowing a movie: 
 Main call stack:
@@ -93,9 +133,37 @@ Auxilary functions:
 CommandProcessor::removeCommasAndLeadingSpace CustomerManager::findCustomer CustomHashMap::retrieve CustomHashMap::Hash
 Inventory::findMovie Inventory::parseAttributes
 
-explain borrowing a movie that does not exist: TODO(student)
+explain borrowing a movie that does not exist: in Inventory.cpp 
+Movie* Inventory::findMovie(char type, const string& attributes) const {
 
-explain borrowing a movie that has 0 stock: TODO(student)
+    //returns found movie or nullptr if not found
+    if (it != movieMap->end()) {
+        cout << "Found movie with key: " << key << endl;
+        return it->second;
+    } else {
+        cout << "Movie with key: " << key << " not found." << endl;
+        return nullptr;
+    }
+
+in CommandProcessor.cpp - void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char movieType, const string& attributes) {
+    //finds movie by type and attributes
+    Movie* movie = inventory.findMovie(movieType, attributes);
+
+        if (!movie) {
+        //error if movie not found
+        cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
+        return;
+    }
+(uses call to findMovie in inventory.cpp, If the movie is not found (if (!movie)), an error message is printed, and the command is not processed further.)
+
+
+
+explain borrowing a movie that has 0 stock: in Transaction.cpp - bool Borrow::execute() {
+     } else {
+        //alerts if borrow not executed successfully
+        cout << "Borrow denied, none in stock." << endl;
+        return false;
+(if none in stock, error message is is printed, and execute aborts)
 
 explain returning a movie that customer has not checked out: 
 ->  CommandProcessor reads the return from the file

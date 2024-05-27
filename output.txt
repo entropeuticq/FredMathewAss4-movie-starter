@@ -1,0 +1,3587 @@
+Mon May 27 19:05:15 UTC 2024
+Linux LinuxMachine 5.15.133.1-microsoft-standard-WSL2 #1 SMP Thu Oct 5 21:02:42 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux
+uid=1000(cssuwbstudent) gid=1000(cssuwbstudent) groups=1000(cssuwbstudent),10(wheel)
+=====================================================
+1. Compiles without warnings with -Wall -Wextra flags
+=====================================================
+CustomHashMap.cpp: In member function ‘void CustomHashMap::rehash()’:
+CustomHashMap.cpp:64:9: warning: unused variable ‘oldSize’ [-Wunused-variable]
+     int oldSize = map.size(); //size of the old map
+         ^~~~~~~
+=====================================================
+2. Runs and produces correct output
+=====================================================
+Reading line: C, 10, Michael Curtiz, Casablanca, Ingrid Bergman 8 1942
+Reading line: C, 10, Michael Curtiz, Casablanca, Humphrey Bogart 8 1942
+Reading line: C, 10, Victor Fleming, The Wizard of Oz, Judy Garland 7 1939
+Reading line: F, 10, Nora Ephron, Sleepless in Seattle, 1993
+Reading line: D, 10, Barry Levinson, Good Morning Vietnam, 1988
+Reading line: D, 10, Barry Levinson, Same Director Good Morning Vietnam, 1988
+Reading line: D, 10, Gus Van Sant, Good Will Hunting, 2000
+Reading line: F, 10, Woody Allen, Annie Hall, 1977
+Reading line: F, 10, Rob Reiner, When Harry Met Sally, 1989
+Reading line: D, 10, Phillippe De Broca, King of Hearts, 1967
+Reading line: D, 10, Steven Spielberg, Schindler's List, 1993
+Reading line: F, 10, Gore Verbinski, Pirates of the Caribbean, 2003
+Reading line: F, 10, Different Years, Pirates of the Caribbean, 2000
+Reading line: F, 10, Joel Coen, Fargo, 1996
+Reading line: D, 10, Jonathan Demme, Silence of the Lambs, 1991
+Reading line: D, 10, Clint Eastwood, Unforgiven, 1992
+Reading line: C, 10, Hal Ashby, Harold and Maude, Ruth Gordon 3 1971
+Reading line: Z, 10, Hal Ashby, Harold and Maude, Bud Cort 3 1971
+Invalid movie type in file: Z
+Reading line: C, 10, George Cukor, Holiday, Katherine Hepburn 9 1938
+Reading line: C, 10, George Cukor, Holiday, Cary Grant 9 1938
+Reading line: C, 10, Victor Fleming, Gone With the Wind, Vivien Leigh 2 1939
+Reading line: C, 10, Victor Fleming, Gone With the Wind, Clark Gable 2 1939
+Reading line: C, 10, George Cukor, The Philadelphia Story, Katherine Hepburn 5 1940
+Reading line: C, 10, George Cukor, The Philadelphia Story, Cary Grant 5 1940
+Reading line: C, 10, John Huston, The Maltese Falcon, Humphrey Bogart 10 1941
+Reading line: Z, 10, Frank Capra, It's a Wonderful Life, James Steward 11 1946
+Invalid movie type in file: Z
+Reading line: C, 10, Frank Capra, It's a Wonderful Life, James Steward 11 1946
+Reading line: C, 10, Frank Capra, It's a Wonderful Life, Donna Reed 11 1946
+Reading line: C, 10, Stanley Kubrick, A Clockwork Orange, Malcolm McDowell 2 1971
+Reading line: F, 10, John Landis, National Lampoon's Animal House, 1978
+Reading line: D, 10, Nancy Savoca, Dogfight, 1991
+Reading line: F, 10, Nora Ephron, You've Got Mail, 1998
+Inventory:
+Comedies:
+Type: Comedy
+Title: Annie Hall
+Director: Woody Allen
+Year: 1977
+Stock: 10
+
+Type: Comedy
+Title: Fargo
+Director: Joel Coen
+Year: 1996
+Stock: 10
+
+Type: Comedy
+Title: National Lampoon's Animal House
+Director: John Landis
+Year: 1978
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Different Years
+Year: 2000
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Gore Verbinski
+Year: 2003
+Stock: 10
+
+Type: Comedy
+Title: Sleepless in Seattle
+Director: Nora Ephron
+Year: 1993
+Stock: 10
+
+Type: Comedy
+Title: When Harry Met Sally
+Director: Rob Reiner
+Year: 1989
+Stock: 10
+
+Type: Comedy
+Title: You've Got Mail
+Director: Nora Ephron
+Year: 1998
+Stock: 10
+
+Dramas:
+Type: Drama
+Director: Barry Levinson
+Title: Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Barry Levinson
+Title: Same Director Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Clint Eastwood
+Title: Unforgiven
+Year: 1992
+Stock: 10
+
+
+Type: Drama
+Director: Gus Van Sant
+Title: Good Will Hunting
+Year: 2000
+Stock: 10
+
+
+Type: Drama
+Director: Jonathan Demme
+Title: Silence of the Lambs
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Nancy Savoca
+Title: Dogfight
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Phillippe De Broca
+Title: King of Hearts
+Year: 1967
+Stock: 10
+
+
+Type: Drama
+Director: Steven Spielberg
+Title: Schindler's List
+Year: 1993
+Stock: 10
+
+
+Classics:
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Cary Grant
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Katherine Hepburn
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Clark Gable
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Vivien Leigh
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: The Wizard of Oz
+Major Actor: Judy Garland
+Date: 7 1939
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Cary Grant
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Katherine Hepburn
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: John Huston
+Title: The Maltese Falcon
+Major Actor: Humphrey Bogart
+Date: 10 1941
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Humphrey Bogart
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Ingrid Bergman
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: Donna Reed
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: James Steward
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Stanley Kubrick
+Title: A Clockwork Orange
+Major Actor: Malcolm McDowell
+Date: 2 1971
+Stock: 10
+
+Type: Classic
+Director: Hal Ashby
+Title: Harold and Maude
+Major Actor: Ruth Gordon
+Date: 3 1971
+Stock: 10
+
+Inventory:
+Comedies:
+Type: Comedy
+Title: Annie Hall
+Director: Woody Allen
+Year: 1977
+Stock: 10
+
+Type: Comedy
+Title: Fargo
+Director: Joel Coen
+Year: 1996
+Stock: 10
+
+Type: Comedy
+Title: National Lampoon's Animal House
+Director: John Landis
+Year: 1978
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Different Years
+Year: 2000
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Gore Verbinski
+Year: 2003
+Stock: 10
+
+Type: Comedy
+Title: Sleepless in Seattle
+Director: Nora Ephron
+Year: 1993
+Stock: 10
+
+Type: Comedy
+Title: When Harry Met Sally
+Director: Rob Reiner
+Year: 1989
+Stock: 10
+
+Type: Comedy
+Title: You've Got Mail
+Director: Nora Ephron
+Year: 1998
+Stock: 10
+
+Dramas:
+Type: Drama
+Director: Barry Levinson
+Title: Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Barry Levinson
+Title: Same Director Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Clint Eastwood
+Title: Unforgiven
+Year: 1992
+Stock: 10
+
+
+Type: Drama
+Director: Gus Van Sant
+Title: Good Will Hunting
+Year: 2000
+Stock: 10
+
+
+Type: Drama
+Director: Jonathan Demme
+Title: Silence of the Lambs
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Nancy Savoca
+Title: Dogfight
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Phillippe De Broca
+Title: King of Hearts
+Year: 1967
+Stock: 10
+
+
+Type: Drama
+Director: Steven Spielberg
+Title: Schindler's List
+Year: 1993
+Stock: 10
+
+
+Classics:
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Cary Grant
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Katherine Hepburn
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Clark Gable
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Vivien Leigh
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: The Wizard of Oz
+Major Actor: Judy Garland
+Date: 7 1939
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Cary Grant
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Katherine Hepburn
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: John Huston
+Title: The Maltese Falcon
+Major Actor: Humphrey Bogart
+Date: 10 1941
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Humphrey Bogart
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Ingrid Bergman
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: Donna Reed
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: James Steward
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Stanley Kubrick
+Title: A Clockwork Orange
+Major Actor: Malcolm McDowell
+Date: 2 1971
+Stock: 10
+
+Type: Classic
+Director: Hal Ashby
+Title: Harold and Maude
+Major Actor: Ruth Gordon
+Date: 3 1971
+Stock: 10
+
+Transaction History for Mouse, Minnie: 
+Transaction History for Frog, Freddie: 
+Transaction History for Wacky, Wally: 
+Found movie with key: You've Got Mail 1998
+Found movie with key: Barry Levinson Good Morning Vietnam
+Found movie with key: 1940 5 Katherine Hepburn
+Found movie with key: Sleepless in Seattle 1993
+Found movie with key: 1971 2 Malcolm McDowell
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: Annie Hall 1977
+Found movie with key: 1971 2 Malcolm McDowell
+Invalid movie type: Z
+Error: Movie not found for borrow command with attributes: 2 1971 Malcolm McDowell
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: Gus Van Sant Good Will Hunting
+Found movie with key: Phillippe De Broca King of Hearts
+Found movie with key: 1971 2 Malcolm McDowell
+Found movie with key: 1940 5 Cary Grant
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: When Harry Met Sally 1989
+Found movie with key: Jonathan Demme Silence of the Lambs
+Found movie with key: You've Got Mail 1998
+Found movie with key: You've Got Mail 1998
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1941 10 Humphrey Bogart
+Found movie with key: 1971 3 Ruth Gordon
+Error: Invalid command type X in command: X
+Found movie with key: 1938 9 Cary Grant
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: Nancy Savoca Dogfight
+Found movie with key: Steven Spielberg Schindler's List
+Found movie with key: 1971 3 Ruth Gordon
+Error: Invalid command type Z in command: Z 1000 D C 10 1941 Humphrey Bogart
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: National Lampoon's Animal House 1978
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: Nancy Savoca Dogfight
+Found movie with key: Clint Eastwood Unforgiven
+Found movie with key: Fargo 1996
+Error: customer ID 1234 not found.
+Movie with key: Bogus Title 2001 not found.
+Error: Movie not found for borrow command with attributes: Bogus Title 2001
+Error: Invalid media type Z for borrow command.
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1971 3 Ruth Gordon
+Borrow denied, none in stock.
+Found movie with key: 1971 3 Ruth Gordon
+Borrow denied, none in stock.
+Found movie with key: 1971 3 Ruth Gordon
+Borrow denied, none in stock.
+Movie with key: Steven Spielberg Bogus Title not found.
+Error: Movie not found for borrow command with attributes: Steven Spielberg Bogus Title
+Inventory:
+Comedies:
+Type: Comedy
+Title: Annie Hall
+Director: Woody Allen
+Year: 1977
+Stock: 9
+
+Type: Comedy
+Title: Fargo
+Director: Joel Coen
+Year: 1996
+Stock: 9
+
+Type: Comedy
+Title: National Lampoon's Animal House
+Director: John Landis
+Year: 1978
+Stock: 9
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Different Years
+Year: 2000
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Gore Verbinski
+Year: 2003
+Stock: 10
+
+Type: Comedy
+Title: Sleepless in Seattle
+Director: Nora Ephron
+Year: 1993
+Stock: 9
+
+Type: Comedy
+Title: When Harry Met Sally
+Director: Rob Reiner
+Year: 1989
+Stock: 9
+
+Type: Comedy
+Title: You've Got Mail
+Director: Nora Ephron
+Year: 1998
+Stock: 9
+
+Dramas:
+Type: Drama
+Director: Barry Levinson
+Title: Good Morning Vietnam
+Year: 1988
+Stock: 9
+
+
+Type: Drama
+Director: Barry Levinson
+Title: Same Director Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Clint Eastwood
+Title: Unforgiven
+Year: 1992
+Stock: 9
+
+
+Type: Drama
+Director: Gus Van Sant
+Title: Good Will Hunting
+Year: 2000
+Stock: 9
+
+
+Type: Drama
+Director: Jonathan Demme
+Title: Silence of the Lambs
+Year: 1991
+Stock: 9
+
+
+Type: Drama
+Director: Nancy Savoca
+Title: Dogfight
+Year: 1991
+Stock: 8
+
+
+Type: Drama
+Director: Phillippe De Broca
+Title: King of Hearts
+Year: 1967
+Stock: 9
+
+
+Type: Drama
+Director: Steven Spielberg
+Title: Schindler's List
+Year: 1993
+Stock: 9
+
+
+Classics:
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Cary Grant
+Date: 9 1938
+Stock: 9
+
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Katherine Hepburn
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Clark Gable
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Vivien Leigh
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: The Wizard of Oz
+Major Actor: Judy Garland
+Date: 7 1939
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Cary Grant
+Date: 5 1940
+Stock: 9
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Katherine Hepburn
+Date: 5 1940
+Stock: 9
+
+Type: Classic
+Director: John Huston
+Title: The Maltese Falcon
+Major Actor: Humphrey Bogart
+Date: 10 1941
+Stock: 9
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Humphrey Bogart
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Ingrid Bergman
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: Donna Reed
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: James Steward
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Stanley Kubrick
+Title: A Clockwork Orange
+Major Actor: Malcolm McDowell
+Date: 2 1971
+Stock: 9
+
+Type: Classic
+Director: Hal Ashby
+Title: Harold and Maude
+Major Actor: Ruth Gordon
+Date: 3 1971
+Stock: 0
+
+Transaction History for Mouse, Minnie: 
+Borrowed: Good Morning Vietnam by Mouse, Minnie
+Borrowed: The Philadelphia Story by Mouse, Minnie
+Borrowed: Good Will Hunting by Mouse, Minnie
+Borrowed: The Philadelphia Story by Mouse, Minnie
+Borrowed: Harold and Maude by Mouse, Minnie
+Transaction History for Mouse, Mickey: 
+Borrowed: A Clockwork Orange by Mouse, Mickey
+Borrowed: Harold and Maude by Mouse, Mickey
+Borrowed: The Maltese Falcon by Mouse, Mickey
+Borrowed: Holiday by Mouse, Mickey
+Transaction History for Frog, Freddie: 
+Borrowed: Harold and Maude by Frog, Freddie
+Returned: Harold and Maude by Frog, Freddie
+Borrowed: Harold and Maude by Frog, Freddie
+Returned: Harold and Maude by Frog, Freddie
+Borrowed: Harold and Maude by Frog, Freddie
+Returned: Harold and Maude by Frog, Freddie
+Borrowed: Harold and Maude by Frog, Freddie
+Transaction History for Wacky, Wally: 
+Borrowed: You've Got Mail by Wacky, Wally
+Returned: You've Got Mail by Wacky, Wally
+Borrowed: Harold and Maude by Wacky, Wally
+Borrowed: Harold and Maude by Wacky, Wally
+Borrowed: National Lampoon's Animal House by Wacky, Wally
+Transaction History for Pig, Porky: 
+Borrowed: Annie Hall by Pig, Porky
+Borrowed: When Harry Met Sally by Pig, Porky
+Borrowed: Silence of the Lambs by Pig, Porky
+Borrowed: Dogfight by Pig, Porky
+Borrowed: Harold and Maude by Pig, Porky
+Found movie with key: Sleepless in Seattle 1993
+Found movie with key: Annie Hall 1977
+Found movie with key: When Harry Met Sally 1989
+Found movie with key: Pirates of the Caribbean 2003
+Found movie with key: Fargo 1996
+Found movie with key: You've Got Mail 1998
+Found movie with key: National Lampoon's Animal House 1978
+Found movie with key: Barry Levinson Good Morning Vietnam
+Found movie with key: Gus Van Sant Good Will Hunting
+Found movie with key: Phillippe De Broca King of Hearts
+Found movie with key: Steven Spielberg Schindler's List
+Found movie with key: Jonathan Demme Silence of the Lambs
+Found movie with key: Clint Eastwood Unforgiven
+Found movie with key: Nancy Savoca Dogfight
+Found movie with key: 1942 8 Ingrid Bergman
+Found movie with key: 1942 8 Humphrey Bogart
+Found movie with key: 1939 7 Judy Garland
+Found movie with key: 1971 3 Ruth Gordon
+Found movie with key: 1938 9 Katherine Hepburn
+Found movie with key: 1938 9 Cary Grant
+Found movie with key: 1939 2 Vivien Leigh
+Found movie with key: 1939 2 Clark Gable
+Found movie with key: 1940 5 Katherine Hepburn
+Found movie with key: 1940 5 Cary Grant
+Found movie with key: 1941 10 Humphrey Bogart
+Found movie with key: 1946 11 Donna Reed
+Found movie with key: 1971 2 Malcolm McDowell
+Found movie with key: You've Got Mail 1998
+All command processor tests passed!
+Testing display functionality:
+Type: Comedy
+Title: The Grand Budapest Hotel
+Director: Wes Anderson
+Year: 2014
+Stock: 10
+Type: Drama
+Director: Frank Darabont
+Title: The Shawshank Redemption
+Year: 1994
+Stock: 5
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone with the Wind
+Major Actor: Clark Gable
+Date: 1 1939
+Stock: 3
+All Movie tests passed!
+Transaction History for Doe, John: 
+Borrowed: The Grand Budapest Hotel by Doe, John
+Returned: The Grand Budapest Hotel by Doe, John
+Borrowed: The Shawshank Redemption by Doe, John
+Movies in stock after customers transactions:
+ The Grand Budapest Hotel - Stock: 10
+ The Shawshank Redemption - Stock: 4
+All Transaction and Customer tests passed!
+File data4movies.txt opened successfully.
+Reading line: C, 10, Michael Curtiz, Casablanca, Ingrid Bergman 8 1942
+Reading line: C, 10, Michael Curtiz, Casablanca, Humphrey Bogart 8 1942
+Reading line: C, 10, Victor Fleming, The Wizard of Oz, Judy Garland 7 1939
+Reading line: F, 10, Nora Ephron, Sleepless in Seattle, 1993
+Reading line: D, 10, Barry Levinson, Good Morning Vietnam, 1988
+Reading line: D, 10, Barry Levinson, Same Director Good Morning Vietnam, 1988
+Reading line: D, 10, Gus Van Sant, Good Will Hunting, 2000
+Reading line: F, 10, Woody Allen, Annie Hall, 1977
+Reading line: F, 10, Rob Reiner, When Harry Met Sally, 1989
+Reading line: D, 10, Phillippe De Broca, King of Hearts, 1967
+Reading line: D, 10, Steven Spielberg, Schindler's List, 1993
+Reading line: F, 10, Gore Verbinski, Pirates of the Caribbean, 2003
+Reading line: F, 10, Different Years, Pirates of the Caribbean, 2000
+Reading line: F, 10, Joel Coen, Fargo, 1996
+Reading line: D, 10, Jonathan Demme, Silence of the Lambs, 1991
+Reading line: D, 10, Clint Eastwood, Unforgiven, 1992
+Reading line: C, 10, Hal Ashby, Harold and Maude, Ruth Gordon 3 1971
+Reading line: Z, 10, Hal Ashby, Harold and Maude, Bud Cort 3 1971
+Invalid movie type in file: Z
+Reading line: C, 10, George Cukor, Holiday, Katherine Hepburn 9 1938
+Reading line: C, 10, George Cukor, Holiday, Cary Grant 9 1938
+Reading line: C, 10, Victor Fleming, Gone With the Wind, Vivien Leigh 2 1939
+Reading line: C, 10, Victor Fleming, Gone With the Wind, Clark Gable 2 1939
+Reading line: C, 10, George Cukor, The Philadelphia Story, Katherine Hepburn 5 1940
+Reading line: C, 10, George Cukor, The Philadelphia Story, Cary Grant 5 1940
+Reading line: C, 10, John Huston, The Maltese Falcon, Humphrey Bogart 10 1941
+Reading line: Z, 10, Frank Capra, It's a Wonderful Life, James Steward 11 1946
+Invalid movie type in file: Z
+Reading line: C, 10, Frank Capra, It's a Wonderful Life, James Steward 11 1946
+Reading line: C, 10, Frank Capra, It's a Wonderful Life, Donna Reed 11 1946
+Reading line: C, 10, Stanley Kubrick, A Clockwork Orange, Malcolm McDowell 2 1971
+Reading line: F, 10, John Landis, National Lampoon's Animal House, 1978
+Reading line: D, 10, Nancy Savoca, Dogfight, 1991
+Reading line: F, 10, Nora Ephron, You've Got Mail, 1998
+Displaying inventory loaded from file: 
+Inventory:
+Comedies:
+Type: Comedy
+Title: Annie Hall
+Director: Woody Allen
+Year: 1977
+Stock: 10
+
+Type: Comedy
+Title: Fargo
+Director: Joel Coen
+Year: 1996
+Stock: 10
+
+Type: Comedy
+Title: National Lampoon's Animal House
+Director: John Landis
+Year: 1978
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Different Years
+Year: 2000
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Gore Verbinski
+Year: 2003
+Stock: 10
+
+Type: Comedy
+Title: Sleepless in Seattle
+Director: Nora Ephron
+Year: 1993
+Stock: 10
+
+Type: Comedy
+Title: When Harry Met Sally
+Director: Rob Reiner
+Year: 1989
+Stock: 10
+
+Type: Comedy
+Title: You've Got Mail
+Director: Nora Ephron
+Year: 1998
+Stock: 10
+
+Dramas:
+Type: Drama
+Director: Barry Levinson
+Title: Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Barry Levinson
+Title: Same Director Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Clint Eastwood
+Title: Unforgiven
+Year: 1992
+Stock: 10
+
+
+Type: Drama
+Director: Gus Van Sant
+Title: Good Will Hunting
+Year: 2000
+Stock: 10
+
+
+Type: Drama
+Director: Jonathan Demme
+Title: Silence of the Lambs
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Nancy Savoca
+Title: Dogfight
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Phillippe De Broca
+Title: King of Hearts
+Year: 1967
+Stock: 10
+
+
+Type: Drama
+Director: Steven Spielberg
+Title: Schindler's List
+Year: 1993
+Stock: 10
+
+
+Classics:
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Cary Grant
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Katherine Hepburn
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Clark Gable
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Vivien Leigh
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: The Wizard of Oz
+Major Actor: Judy Garland
+Date: 7 1939
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Cary Grant
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Katherine Hepburn
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: John Huston
+Title: The Maltese Falcon
+Major Actor: Humphrey Bogart
+Date: 10 1941
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Humphrey Bogart
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Ingrid Bergman
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: Donna Reed
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: James Steward
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Stanley Kubrick
+Title: A Clockwork Orange
+Major Actor: Malcolm McDowell
+Date: 2 1971
+Stock: 10
+
+Type: Classic
+Director: Hal Ashby
+Title: Harold and Maude
+Major Actor: Ruth Gordon
+Date: 3 1971
+Stock: 10
+
+Displaying inventory after adding movies directly: 
+Inventory:
+Comedies:
+Type: Comedy
+Title: Annie Hall
+Director: Woody Allen
+Year: 1977
+Stock: 10
+
+Type: Comedy
+Title: Fargo
+Director: Joel Coen
+Year: 1996
+Stock: 10
+
+Type: Comedy
+Title: National Lampoon's Animal House
+Director: John Landis
+Year: 1978
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Different Years
+Year: 2000
+Stock: 10
+
+Type: Comedy
+Title: Pirates of the Caribbean
+Director: Gore Verbinski
+Year: 2003
+Stock: 10
+
+Type: Comedy
+Title: Sleepless in Seattle
+Director: Nora Ephron
+Year: 1993
+Stock: 10
+
+Type: Comedy
+Title: Spaceballs
+Director: Mel Brooks
+Year: 1987
+Stock: 8
+
+Type: Comedy
+Title: When Harry Met Sally
+Director: Rob Reiner
+Year: 1989
+Stock: 10
+
+Type: Comedy
+Title: You've Got Mail
+Director: Nora Ephron
+Year: 1998
+Stock: 10
+
+Dramas:
+Type: Drama
+Director: Barry Levinson
+Title: Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Barry Levinson
+Title: Same Director Good Morning Vietnam
+Year: 1988
+Stock: 10
+
+
+Type: Drama
+Director: Clint Eastwood
+Title: Unforgiven
+Year: 1992
+Stock: 10
+
+
+Type: Drama
+Director: Gus Van Sant
+Title: Good Will Hunting
+Year: 2000
+Stock: 10
+
+
+Type: Drama
+Director: Jonathan Demme
+Title: Silence of the Lambs
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Martin Scorsese
+Title: Goodfellas
+Year: 1990
+Stock: 6
+
+
+Type: Drama
+Director: Nancy Savoca
+Title: Dogfight
+Year: 1991
+Stock: 10
+
+
+Type: Drama
+Director: Phillippe De Broca
+Title: King of Hearts
+Year: 1967
+Stock: 10
+
+
+Type: Drama
+Director: Steven Spielberg
+Title: Schindler's List
+Year: 1993
+Stock: 10
+
+
+Classics:
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Cary Grant
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: Holiday
+Major Actor: Katherine Hepburn
+Date: 9 1938
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Clark Gable
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: Gone With the Wind
+Major Actor: Vivien Leigh
+Date: 2 1939
+Stock: 10
+
+Type: Classic
+Director: Victor Fleming
+Title: The Wizard of Oz
+Major Actor: Judy Garland
+Date: 7 1939
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Cary Grant
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: George Cukor
+Title: The Philadelphia Story
+Major Actor: Katherine Hepburn
+Date: 5 1940
+Stock: 10
+
+Type: Classic
+Director: John Huston
+Title: The Maltese Falcon
+Major Actor: Humphrey Bogart
+Date: 10 1941
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Humphrey Bogart
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Michael Curtiz
+Title: Casablanca
+Major Actor: Ingrid Bergman
+Date: 8 1942
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: Donna Reed
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: Frank Capra
+Title: It's a Wonderful Life
+Major Actor: James Steward
+Date: 11 1946
+Stock: 10
+
+Type: Classic
+Director: John Ford
+Title: The Searchers
+Major Actor: John Wayne
+Date: 5 1956
+Stock: 4
+
+Type: Classic
+Director: Stanley Kubrick
+Title: A Clockwork Orange
+Major Actor: Malcolm McDowell
+Date: 2 1971
+Stock: 10
+
+Type: Classic
+Director: Hal Ashby
+Title: Harold and Maude
+Major Actor: Ruth Gordon
+Date: 3 1971
+Stock: 10
+
+Found movie with key: Spaceballs 1987
+Found movie with key: Martin Scorsese Goodfellas
+Found movie with key: 1956 5 John Wayne
+Invalid movie type: X
+Movie with key: Non Existent Movie 2024 not found.
+All inventory tests have passed!
+Couldn't open dfsdf
+ID: 5000 Name: Frog, Freddie
+ID: 9999 Name: Duck, Daffy
+ID: 8888 Name: Pig, Porky
+ID: 2000 Name: Duck, Donald
+ID: 7777 Name: Spider, Sammy
+ID: 6666 Name: Donkey, Darrell
+ID: 9000 Name: Lizard, Larry
+ID: 4444 Name: Moose, Bullwinkle
+ID: 1000 Name: Mouse, Minnie
+ID: 3333 Name: Witch, Wicked
+ID: 1111 Name: Mouse, Mickey
+ID: 8000 Name: Wacky, Wally
+All CustomHashTable and CustomerManager tests have passed!
+=====================================================
+3. clang-tidy warnings are fixed
+=====================================================
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+1 warning generated.
+/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/CustomHashMap.cpp:64:9: warning: Value stored to 'oldSize' during its initialization is never read [clang-analyzer-deadcode.DeadStores]
+    int oldSize = map.size(); //size of the old map
+        ^~~~~~~   ~~~~~~~~~~
+/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/CustomHashMap.cpp:64:9: note: Value stored to 'oldSize' during its initialization is never read
+    int oldSize = map.size(); //size of the old map
+        ^~~~~~~   ~~~~~~~~~~
+=====================================================
+4. clang-format does not find any formatting issues
+=====================================================
+Running clang-format on ./CommandProcessor.cpp
+3,4c3,5
+< //constructor
+< CommandProcessor::CommandProcessor(Inventory& inventory, CustomerManager& customerManager)
+---
+> // constructor
+> CommandProcessor::CommandProcessor(Inventory &inventory,
+>                                    CustomerManager &customerManager)
+7,23c8,162
+< //process commands read from file
+< void CommandProcessor::processCommands(const string& filename) {
+<     //opening file
+<     ifstream infile(filename);
+<     if (!infile) {
+<         cerr << "Error: could not open file " << filename << endl;
+<         return;
+<     }
+< 
+<     string line;
+<     //read file line by line
+<     while (getline(infile, line)) {
+<         //process lines when theyre not empty
+<         if (!line.empty()) {
+<             processCommandString(line);
+<         }
+<     }
+---
+> // process commands read from file
+> void CommandProcessor::processCommands(const string &filename) {
+>   // opening file
+>   ifstream infile(filename);
+>   if (!infile) {
+>     cerr << "Error: could not open file " << filename << endl;
+>     return;
+>   }
+> 
+>   string line;
+>   // read file line by line
+>   while (getline(infile, line)) {
+>     // process lines when theyre not empty
+>     if (!line.empty()) {
+>       processCommandString(line);
+>     }
+>   }
+> }
+> 
+> // function for processing command strings
+> void CommandProcessor::processCommandString(const string &command) {
+>   // create a string stream using command string
+>   istringstream iss(command);
+> 
+>   // reading command types B, R, I, H
+>   char commandType;
+>   iss >> commandType;
+> 
+>   // switch based on different command types
+>   switch (commandType) {
+>   case 'B': {
+>     // borrow command - read ID, media tpye and move type
+>     int customerID;
+>     char mediaType;
+>     char movieType;
+>     iss >> customerID >> mediaType >> movieType;
+>     // read the rest of the line as attributes
+>     string attributes;
+> 
+>     getline(iss, attributes);
+>     attributes = removeCommasAndLeadingSpace(attributes);
+>     // processing borrow command
+>     processBorrowCommand(customerID, mediaType, movieType, attributes);
+>     break;
+>   }
+>   case 'R': {
+>     // return command - ID, mediat type and movie type
+>     int customerID;
+>     char mediaType;
+>     char movieType;
+>     iss >> customerID >> mediaType >> movieType;
+> 
+>     // reading rest of line as attributes
+>     string attributes;
+> 
+>     getline(iss, attributes);
+>     attributes = removeCommasAndLeadingSpace(attributes);
+> 
+>     // process return command
+>     processReturnCommand(customerID, mediaType, movieType, attributes);
+>     break;
+>   }
+>   case 'I': {
+>     // inventory command - processes inventory display
+>     processInventoryCommand();
+>     break;
+>   }
+>   case 'H': {
+>     // history command - reads customer ID
+>     int customerID;
+>     iss >> customerID;
+> 
+>     // process history command
+>     processHistoryCommand(customerID);
+>     break;
+>   }
+>   default:
+>     // prints error message for invalid command types
+>     cerr << "Error: Invalid command type " << commandType
+>          << " in command: " << command << endl;
+>     break;
+>   }
+> }
+> 
+> // processes borrow commands
+> void CommandProcessor::processBorrowCommand(int customerID, char mediaType,
+>                                             char movieType,
+>                                             const string &attributes) {
+>   // validates media type, only one type currently, D for DVD
+>   if (mediaType != 'D') {
+>     cerr << "Error: Invalid media type " << mediaType << " for borrow command."
+>          << endl;
+>     return;
+>   }
+> 
+>   // finds customer by ID
+>   Customer *customer = customerManager.findCustomer(customerID);
+>   if (!customer) {
+>     // error if customer not found
+>     cerr << "Error: customer ID " << customerID << " not found." << endl;
+>     return;
+>   }
+> 
+>   // finds movie by type and attributes
+>   Movie *movie = inventory.findMovie(movieType, attributes);
+> 
+>   if (!movie) {
+>     // error if movie not found
+>     cerr << "Error: Movie not found for borrow command with attributes: "
+>          << attributes << endl;
+>     return;
+>   }
+> 
+>   // creates a borrow transaction and executes it
+>   Borrow *borrowTransaction = new Borrow(customer, movie);
+>   bool isSuccessful = borrowTransaction->execute();
+>   if (!isSuccessful) {
+>     delete borrowTransaction;
+>   }
+> }
+> 
+> void CommandProcessor::processReturnCommand(int customerID, char mediaType,
+>                                             char movieType,
+>                                             const string &attributes) {
+>   // validates media type, only one type currently, D for DVD
+>   if (mediaType != 'D') {
+>     cerr << "Error: Invalid media type " << mediaType << " for borrow command."
+>          << endl;
+>     return;
+>   }
+> 
+>   // finds customer by ID
+>   Customer *customer = customerManager.findCustomer(customerID);
+>   if (!customer) {
+>     // error if customer not found
+>     cerr << "Error: customer ID " << customerID << " not found." << endl;
+>     return;
+>   }
+> 
+>   // finds movie by type and attributes
+>   Movie *movie = inventory.findMovie(movieType, attributes);
+>   if (!movie) {
+>     // error if movie not found
+>     cerr << "Error: Movie not found for borrow command with attributes: "
+>          << attributes << endl;
+>     return;
+>   }
+> 
+>   // creates a borrow transaction and executes it
+>   Return *returnTransaction = new Return(customer, movie);
+> 
+>   bool isSuccessful = returnTransaction->execute();
+>   if (!isSuccessful) {
+>     delete returnTransaction;
+>   }
+26,88c165,166
+< //function for processing command strings
+< void CommandProcessor::processCommandString(const string& command) {
+<     //create a string stream using command string
+<     istringstream iss(command);
+< 
+<     //reading command types B, R, I, H
+<     char commandType;
+<     iss >> commandType;
+< 
+<     //switch based on different command types
+<     switch (commandType) {
+<         case 'B' : {
+<             //borrow command - read ID, media tpye and move type
+<             int customerID;
+<             char mediaType;
+<             char movieType;
+<             iss >> customerID >> mediaType >> movieType;
+<             //read the rest of the line as attributes
+<             string attributes;
+< 
+<             getline(iss, attributes);
+<             attributes = removeCommasAndLeadingSpace(attributes);
+<             //processing borrow command
+<             processBorrowCommand(customerID, mediaType, movieType, attributes);
+<             break;
+<         }
+<         case 'R' : {
+<             //return command - ID, mediat type and movie type
+<             int customerID;
+<             char mediaType;
+<             char movieType;
+<             iss >> customerID >> mediaType >> movieType;
+< 
+<             //reading rest of line as attributes
+<             string attributes;
+< 
+<             getline(iss, attributes);
+<             attributes = removeCommasAndLeadingSpace(attributes);
+<             
+<             //process return command
+<             processReturnCommand(customerID, mediaType, movieType, attributes);
+<             break;
+<         }
+<         case 'I' : {
+<             //inventory command - processes inventory display
+<             processInventoryCommand();
+<             break;
+<         }
+<         case 'H' : {
+<             //history command - reads customer ID
+<             int customerID;
+<             iss >> customerID;
+< 
+<             //process history command
+<             processHistoryCommand(customerID);
+<             break;
+<         }
+<         default:
+<             //prints error message for invalid command types
+<             cerr << "Error: Invalid command type " << commandType << " in command: " << command << endl;
+<             break;
+<     }
+< }
+---
+> // processing inventory display commands
+> void CommandProcessor::processInventoryCommand() { inventory.display(); }
+90,165c168
+< //processes borrow commands
+< void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char movieType, const string& attributes) {
+<     //validates media type, only one type currently, D for DVD
+<     if (mediaType != 'D') {
+<         cerr << "Error: Invalid media type " << mediaType << " for borrow command." << endl;
+<         return;
+<     }
+< 
+<     //finds customer by ID
+<     Customer* customer = customerManager.findCustomer(customerID);
+<     if (!customer) {
+<         //error if customer not found
+<         cerr << "Error: customer ID " << customerID << " not found." << endl;
+<         return;
+<     }
+<     
+<     
+<     //finds movie by type and attributes
+<     Movie* movie = inventory.findMovie(movieType, attributes);
+< 
+<     if (!movie) {
+<         //error if movie not found
+<         cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
+<         return;
+<     }
+< 
+<     //creates a borrow transaction and executes it
+<     Borrow* borrowTransaction = new Borrow(customer, movie);
+<     bool isSuccessful = borrowTransaction->execute();
+<     if(!isSuccessful) {
+<         delete borrowTransaction;
+<     }
+< 
+< }
+< 
+< void CommandProcessor::processReturnCommand(int customerID, char mediaType, char movieType, const string& attributes) {
+<     //validates media type, only one type currently, D for DVD
+<     if (mediaType != 'D') {
+<         cerr << "Error: Invalid media type " << mediaType << " for borrow command." << endl;
+<         return;
+<     }
+< 
+<     //finds customer by ID
+<     Customer* customer = customerManager.findCustomer(customerID);
+<     if (!customer) {
+<         //error if customer not found
+<         cerr << "Error: customer ID " << customerID << " not found." << endl;
+<         return;
+<     }
+< 
+< 
+<     //finds movie by type and attributes
+<     Movie* movie = inventory.findMovie(movieType, attributes);
+<     if (!movie) {
+<         //error if movie not found
+<         cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
+<         return;
+<     }
+< 
+<     //creates a borrow transaction and executes it
+<     Return* returnTransaction = new Return(customer, movie);
+< 
+<     bool isSuccessful = returnTransaction->execute();
+<     if(!isSuccessful) {
+<         delete returnTransaction;
+<     }
+< 
+< }
+< 
+< 
+< //processing inventory display commands
+< void CommandProcessor::processInventoryCommand() {
+<     inventory.display();
+< }
+< 
+< //processing history commands
+---
+> // processing history commands
+167,171c170,174
+<     Customer* customer = customerManager.findCustomer(customerID);
+<     if(!customer) {
+<         cerr << "Error: customer ID " << customerID << " not found." << endl;
+<         return;
+<     }
+---
+>   Customer *customer = customerManager.findCustomer(customerID);
+>   if (!customer) {
+>     cerr << "Error: customer ID " << customerID << " not found." << endl;
+>     return;
+>   }
+173c176
+<     customer->displayHistory();
+---
+>   customer->displayHistory();
+177,185c180,189
+<     string attributesNoCommas = "";
+<     string attributesNoCommasOrLeadingSpace = "";
+<     for(const auto &attribute: str) {
+<         if(attribute != ',') {
+<             attributesNoCommas += attribute;
+<         }
+<     }
+<     attributesNoCommasOrLeadingSpace = attributesNoCommas.substr(1, attributesNoCommas.size());
+<     return attributesNoCommasOrLeadingSpace;
+---
+>   string attributesNoCommas = "";
+>   string attributesNoCommasOrLeadingSpace = "";
+>   for (const auto &attribute : str) {
+>     if (attribute != ',') {
+>       attributesNoCommas += attribute;
+>     }
+>   }
+>   attributesNoCommasOrLeadingSpace =
+>       attributesNoCommas.substr(1, attributesNoCommas.size());
+>   return attributesNoCommasOrLeadingSpace;
+187,188d190
+< 
+< 
+Running clang-format on ./CustomHashMap.cpp
+5c5
+< //Reserves 11 buckets as an initial vector size
+---
+> // Reserves 11 buckets as an initial vector size
+7,8c7,8
+<     map.resize(11);
+<     size = 11;
+---
+>   map.resize(11);
+>   size = 11;
+11,23c11,15
+< int CustomHashMap::getSize() {
+<     return size;
+< }
+< //adds a customer to the hash map by generating the hashing the ID and choosing a bucket accordingly
+< bool CustomHashMap::add(Customer* cust) {
+<     int index = hash(cust->getID()); //the hash index
+< 
+<     //This for loop checks if the ID is already in the map, if so, it returns false
+<     for(const auto& customer: map[index]) {
+< 
+<         if(customer->getID() == cust->getID()) {
+<             return false;
+<         }
+---
+> int CustomHashMap::getSize() { return size; }
+> // adds a customer to the hash map by generating the hashing the ID and choosing
+> // a bucket accordingly
+> bool CustomHashMap::add(Customer *cust) {
+>   int index = hash(cust->getID()); // the hash index
+24a17,22
+>   // This for loop checks if the ID is already in the map, if so, it returns
+>   // false
+>   for (const auto &customer : map[index]) {
+> 
+>     if (customer->getID() == cust->getID()) {
+>       return false;
+26,33c24,32
+<     //add customer to the map
+<     map[index].push_back(cust);
+<     //increase total number of customers by 1
+<     load++;
+<     //rehash if the load is greater than the size
+<     if(load > size) {
+<         rehash();
+<     }
+---
+>   }
+>   // add customer to the map
+>   map[index].push_back(cust);
+>   // increase total number of customers by 1
+>   load++;
+>   // rehash if the load is greater than the size
+>   if (load > size) {
+>     rehash();
+>   }
+35c34
+<     return true;
+---
+>   return true;
+38,40c37
+< int CustomHashMap::hash(int custID) const{
+<     return custID % size;
+< }
+---
+> int CustomHashMap::hash(int custID) const { return custID % size; }
+42,48c39,45
+< Customer* CustomHashMap::retrieve(int custID) const{
+<     int bucket = hash(custID);
+<     for(const auto& customer : map[bucket]) {
+<         if(customer->getID() == custID)
+<             return customer;
+<     }
+<     return nullptr;
+---
+> Customer *CustomHashMap::retrieve(int custID) const {
+>   int bucket = hash(custID);
+>   for (const auto &customer : map[bucket]) {
+>     if (customer->getID() == custID)
+>       return customer;
+>   }
+>   return nullptr;
+51,52c48,49
+< void CustomHashMap::display() const{
+<     for(int i = 0; i < size; i++) {
+---
+> void CustomHashMap::display() const {
+>   for (int i = 0; i < size; i++) {
+54,57c51,53
+<         for(const auto& customer : map[i]) {
+<             cout << "ID: " << customer->getID() << " Name: " << customer->getFullName() << endl;
+<         }
+<         
+---
+>     for (const auto &customer : map[i]) {
+>       cout << "ID: " << customer->getID()
+>            << " Name: " << customer->getFullName() << endl;
+59c55
+< 
+---
+>   }
+62c58
+< //Increases the size of the hash map by 10
+---
+> // Increases the size of the hash map by 10
+64,78c60,66
+<     int oldSize = map.size(); //size of the old map
+<     int index; //used within inner for loop to hold customer hashes
+<     size = size + 10; //the size of the new map
+< 
+<     //creates a new map with the new size
+<     vector<list<Customer*>> newMap;
+<     newMap.resize(size);
+< 
+<     //iterates through the current map and adds all the customers to the new map
+<     for(int i = 0; i < map.size(); i++) {
+< 
+<         for(const auto& customer : map[i]) {
+<             index = hash(customer->getID());
+<             newMap[index].push_back(customer);
+<         }
+---
+>   int oldSize = map.size(); // size of the old map
+>   int index;        // used within inner for loop to hold customer hashes
+>   size = size + 10; // the size of the new map
+> 
+>   // creates a new map with the new size
+>   vector<list<Customer *>> newMap;
+>   newMap.resize(size);
+79a68,73
+>   // iterates through the current map and adds all the customers to the new map
+>   for (int i = 0; i < map.size(); i++) {
+> 
+>     for (const auto &customer : map[i]) {
+>       index = hash(customer->getID());
+>       newMap[index].push_back(customer);
+80a75
+>   }
+82,83c77,78
+<     //replaces the old map with the new map
+<     map = newMap;
+---
+>   // replaces the old map with the new map
+>   map = newMap;
+87,91c82
+<     for(int i = 0; i < map.size(); i++) {
+< 
+<         for(const auto& customer : map[i]) {
+<             delete customer;
+<         }
+---
+>   for (int i = 0; i < map.size(); i++) {
+92a84,85
+>     for (const auto &customer : map[i]) {
+>       delete customer;
+93a87
+>   }
+Running clang-format on ./Customer.cpp
+5,7c5,7
+< //adds a transaction to customers history vector
+< void Customer::addTransaction(const Transaction* transaction) {
+<     transactions.push_back(transaction);
+---
+> // adds a transaction to customers history vector
+> void Customer::addTransaction(const Transaction *transaction) {
+>   transactions.push_back(transaction);
+10c10
+< //displays customers transaction history
+---
+> // displays customers transaction history
+12,17c12,17
+<     cout << "Transaction History for " << getFullName() << ": " << endl;
+<     //iterating through customers history vector
+<     for (const auto& transaction : transactions) {
+<         transaction->display(); 
+<         cout << endl;
+<     }
+---
+>   cout << "Transaction History for " << getFullName() << ": " << endl;
+>   // iterating through customers history vector
+>   for (const auto &transaction : transactions) {
+>     transaction->display();
+>     cout << endl;
+>   }
+19,28c19,28
+< //Checks if the customer has an active borrow of a movie
+< bool Customer::hasActiveBorrow(Movie* movie) {
+<     int borrows = 0;
+<     int returns = 0;
+<     for (const auto& transaction : transactions) {
+<         if(transaction->getMovie() == movie && transaction->getType() == 'B') {
+<             ++borrows;
+<         } else if (transaction->getMovie() == movie && transaction->getType() == 'R') {
+<             ++returns;
+<         }
+---
+> // Checks if the customer has an active borrow of a movie
+> bool Customer::hasActiveBorrow(Movie *movie) {
+>   int borrows = 0;
+>   int returns = 0;
+>   for (const auto &transaction : transactions) {
+>     if (transaction->getMovie() == movie && transaction->getType() == 'B') {
+>       ++borrows;
+>     } else if (transaction->getMovie() == movie &&
+>                transaction->getType() == 'R') {
+>       ++returns;
+30,37c30,34
+<     if(borrows > returns)
+<         return true;
+<     else   
+<         return false;
+< }
+< //returns Customer ID number
+< int Customer::getID() const {
+<     return id;
+---
+>   }
+>   if (borrows > returns)
+>     return true;
+>   else
+>     return false;
+38a36,37
+> // returns Customer ID number
+> int Customer::getID() const { return id; }
+40,43c39,40
+< //return customers full name
+< string Customer::getFullName() const {
+<     return lastName + ", " + firstName;
+< }
+---
+> // return customers full name
+> string Customer::getFullName() const { return lastName + ", " + firstName; }
+46,48c43,45
+<     for (const auto& transaction : transactions) {
+<         delete transaction;
+<     }
+---
+>   for (const auto &transaction : transactions) {
+>     delete transaction;
+>   }
+Running clang-format on ./CustomerManager.cpp
+5,26c5,39
+< void CustomerManager::loadCustomers(const string &filename)
+< {
+<     string currentLine;
+<     string IDs;
+<     int ID;
+<     string firstName;
+<     string lastName;
+< 
+<     ifstream thisFile(filename);
+< 
+<     if (!thisFile.is_open())
+<     {
+<         cerr << "Couldn't open " << filename << endl;
+<         return;
+<     }
+< 
+<     // Read the first line separately
+<     getline(thisFile, currentLine);
+<     stringstream lineStream(currentLine); // Create a stringstream for parsing
+< 
+<     // Parse the first line to get data
+<     // Need this here because the loop was not reading first line because of the getline break condition
+---
+> void CustomerManager::loadCustomers(const string &filename) {
+>   string currentLine;
+>   string IDs;
+>   int ID;
+>   string firstName;
+>   string lastName;
+> 
+>   ifstream thisFile(filename);
+> 
+>   if (!thisFile.is_open()) {
+>     cerr << "Couldn't open " << filename << endl;
+>     return;
+>   }
+> 
+>   // Read the first line separately
+>   getline(thisFile, currentLine);
+>   stringstream lineStream(currentLine); // Create a stringstream for parsing
+> 
+>   // Parse the first line to get data
+>   // Need this here because the loop was not reading first line because of the
+>   // getline break condition
+>   lineStream >> IDs >> lastName >> firstName;
+>   // ensures id is an integer
+>   try {
+>     ID = stoi(IDs);
+>     addCustomer(ID, firstName, lastName);
+>   } catch (const invalid_argument &) {
+>     cout << "Error: Invalid Customer ID" << endl;
+>     // prevents invalid customer ID
+>   }
+> 
+>   // Now iterate through the rest of the file
+>   while (getline(thisFile, currentLine)) {
+>     lineStream.clear();          // Clear any flags from previous parsing
+>     lineStream.str(currentLine); // Set the stringstream to the new line
+28,37c41,46
+<     //ensures id is an integer
+<     try
+<     {
+<         ID = stoi(IDs);
+<         addCustomer(ID, firstName, lastName);
+<     }
+<     catch (const invalid_argument &)
+<     {
+<         cout << "Error: Invalid Customer ID" << endl;
+<         // prevents invalid customer ID
+---
+>     try {
+>       ID = stoi(IDs);
+>       addCustomer(ID, firstName, lastName);
+>     } catch (const invalid_argument &) {
+>       cout << "Error: Invalid Customer ID" << endl;
+>       // prevents invalid customer ID
+38a48
+>   }
+40,58c50
+<     // Now iterate through the rest of the file
+<     while (getline(thisFile, currentLine))
+<     {
+<         lineStream.clear();          // Clear any flags from previous parsing
+<         lineStream.str(currentLine); // Set the stringstream to the new line
+<         lineStream >> IDs >> lastName >> firstName;
+<         try
+<         {
+<             ID = stoi(IDs);
+<             addCustomer(ID, firstName, lastName);
+<         }
+<         catch (const invalid_argument &)
+<         {
+<             cout << "Error: Invalid Customer ID" << endl;
+<             // prevents invalid customer ID
+<         }
+<     }
+< 
+<     thisFile.close();
+---
+>   thisFile.close();
+61,63c53,54
+< Customer *CustomerManager::findCustomer(int custID) const
+< {
+<     return customerMap.retrieve(custID);
+---
+> Customer *CustomerManager::findCustomer(int custID) const {
+>   return customerMap.retrieve(custID);
+66,69c57
+< void CustomerManager::displayCustomers() const
+< {
+<     customerMap.display();
+< }
+---
+> void CustomerManager::displayCustomers() const { customerMap.display(); }
+71,76c59,64
+< void CustomerManager::addCustomer(int ID, const string &firstName, const string &lastName)
+< {
+<     // create a new customer
+<     Customer *x = new Customer(ID, firstName, lastName);
+<     // add it to the customer hash map
+<     customerMap.add(x);
+---
+> void CustomerManager::addCustomer(int ID, const string &firstName,
+>                                   const string &lastName) {
+>   // create a new customer
+>   Customer *x = new Customer(ID, firstName, lastName);
+>   // add it to the customer hash map
+>   customerMap.add(x);
+Running clang-format on ./Inventory.cpp
+4,8c4,8
+< #include <algorithm>        //for sorting
+< #include <sstream>          //string stream
+< #include <iostream>         
+< #include <fstream>          //file stream
+< #include <cctype>           //character handling
+---
+> #include <algorithm> //for sorting
+> #include <cctype>    //character handling
+> #include <fstream>   //file stream
+> #include <iostream>
+> #include <sstream> //string stream
+12c12
+< //Destructor for cleaning up dynamically allocated movie objects
+---
+> // Destructor for cleaning up dynamically allocated movie objects
+14,23c14,23
+<     //loops through all entries in the movie type map deleting them
+<     for (auto& pair : comedyMap) {
+<         delete pair.second;
+<     }
+<     for (auto& pair : dramaMap) {
+<         delete pair.second;
+<     }
+<     for (auto& pair : classicMap) {
+<         delete pair.second;
+<     }
+---
+>   // loops through all entries in the movie type map deleting them
+>   for (auto &pair : comedyMap) {
+>     delete pair.second;
+>   }
+>   for (auto &pair : dramaMap) {
+>     delete pair.second;
+>   }
+>   for (auto &pair : classicMap) {
+>     delete pair.second;
+>   }
+26,35c26,93
+< //load movies from a file
+< void Inventory::loadMovies(const string& filename) {
+<     //opens the file to prepare for reading
+<     ifstream infile(filename);
+< 
+<     //check to make sure file was opened successfully
+<     if(!infile) {
+<         cerr << "Error: could not open file " << filename << endl;
+<         return;
+<     }
+---
+> // load movies from a file
+> void Inventory::loadMovies(const string &filename) {
+>   // opens the file to prepare for reading
+>   ifstream infile(filename);
+> 
+>   // check to make sure file was opened successfully
+>   if (!infile) {
+>     cerr << "Error: could not open file " << filename << endl;
+>     return;
+>   }
+> 
+>   // holds each line from the file
+>   string line;
+>   // reads the file line by line
+>   while (getline(infile, line)) {
+>     // skips empty lines
+>     if (line.empty()) {
+>       continue;
+>     }
+>     // debug statement
+>     cout << "Reading line: " << line << endl;
+> 
+>     // for parsing the line
+>     istringstream iss(line);
+>     // holds type of movie F, D or C
+>     char type;
+>     // holds stock quantity
+>     int stock;
+>     // holds directors name and movie title and major actor
+>     string director, title, firstName, lastName, majorActor;
+>     // holds month and year of release date
+>     int month, year = 0;
+> 
+>     // reads type from our string stream with error when not found
+>     if (!(iss >> type)) {
+>       cerr << "Invalid format: missing type in line: " << line << endl;
+>       continue;
+>     }
+> 
+>     // ignore the comma after type
+>     iss.ignore(1, ',');
+> 
+>     // reads stock from our string stream with error when not found
+>     if (!(iss >> stock)) {
+>       cerr << "Invalid format: missing stock in line: " << line << endl;
+>       continue;
+>     }
+> 
+>     // ignore the comma after the stock
+>     iss.ignore(1, ',');
+> 
+>     // reads director from our string stream with error when not found
+>     // stops reading at ','
+>     if (!getline(iss, director, ',')) {
+>       cerr << "Invalid format: missing director in line: " << line << endl;
+>       continue;
+>     }
+> 
+>     // reads title from our string stream with error when not found
+>     // stops reading at ','
+>     if (!getline(iss, title, ',')) {
+>       cerr << "Invalid format: missing title in line: " << line << endl;
+>       continue;
+>     }
+> 
+>     // remove leading and trailing spaces from director and title
+>     director.erase(0, director.find_first_not_of(" \t"));
+>     director.erase(director.find_last_not_of(" \t") + 1);
+37,138c95,96
+<     //holds each line from the file
+<     string line;
+<     //reads the file line by line
+<     while (getline(infile, line)) {
+<         //skips empty lines
+<         if (line.empty()) {
+<             continue;
+<         }
+<         //debug statement
+<         cout << "Reading line: " << line << endl;
+< 
+<         //for parsing the line
+<         istringstream iss(line);
+<         //holds type of movie F, D or C
+<         char type;
+<         //holds stock quantity
+<         int stock;
+<         //holds directors name and movie title and major actor
+<         string director, title, firstName, lastName, majorActor;
+<         //holds month and year of release date
+<         int month, year = 0;
+< 
+<         //reads type from our string stream with error when not found
+<         if (!(iss >> type)) {
+<             cerr << "Invalid format: missing type in line: " << line << endl;
+<             continue;
+<         }
+< 
+<         //ignore the comma after type
+<         iss.ignore(1, ',');
+< 
+<         //reads stock from our string stream with error when not found
+<         if(!(iss >> stock)) {
+<             cerr << "Invalid format: missing stock in line: " << line << endl;
+<             continue;
+<         }
+< 
+<         //ignore the comma after the stock
+<         iss.ignore(1, ',');
+< 
+<         //reads director from our string stream with error when not found
+<         //stops reading at ','
+<         if (!getline(iss, director, ',')) {
+<             cerr << "Invalid format: missing director in line: " << line << endl;
+<             continue;
+<         }
+< 
+<         //reads title from our string stream with error when not found
+<         //stops reading at ','
+<         if(!getline(iss, title, ',')) {
+<             cerr << "Invalid format: missing title in line: " << line << endl;
+<             continue;
+<         }
+<         
+<         //remove leading and trailing spaces from director and title
+<         director.erase(0, director.find_first_not_of(" \t"));
+<         director.erase(director.find_last_not_of(" \t") + 1);
+< 
+<         title.erase(0, title.find_first_not_of(" \t"));
+<         title.erase(title.find_last_not_of(" \t") + 1);
+< 
+<         //checks if the movie is a Comedy or Drama
+<         if (type == 'F' || type == 'D') {
+<             //reads the year from our string stream, with error when not found
+<             if (!(iss >> year)) {
+<                 cerr << "Invalid format: missing year in line: " << line << endl;
+<                 continue;
+<             }
+< 
+<             //creates a new comedy or or drama object
+<             //cast to Movie type, store in movie pointer, achieves late binding
+<             //allowing the full utilization of virtual overidden functions in derived classes
+<             Movie* movie = (type == 'F') ? static_cast<Movie*>(new Comedy(stock, director, title, year))
+<                                          : static_cast<Movie*>(new Drama(stock, director, title, year));
+<             
+<             addMovie(movie);
+< 
+<         //checks if movie is a Classic    
+<         } else if (type == 'C') {
+<             //skips leading white spaces
+<             iss >> ws;
+<             //reads major actors first and last name, as well as month and year of release, from string stream
+<             //prints error if attributes are missing and skips to next movie
+<             if (!(getline(iss, firstName, ' ') && iss >> lastName >> month >> year)) {
+<                 cerr << "Invalid format: missing major actor, month or year in line: " << line << endl;
+<                 continue;
+<             }
+<             
+<             majorActor = firstName + " " + lastName;
+<             //remove leading and trailing spaces from majorActor
+<             majorActor.erase(0, majorActor.find_first_not_of(" \t"));
+<             majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
+<             
+<             //create classic, cast to movie, store in movie pointer, achieves late binding
+<             Movie* movie = static_cast<Movie*>(new Classic(stock, director, title, majorActor, month, year));
+<             addMovie(movie);
+<         } else {
+<             //invalid movie type
+<             cerr << "Invalid movie type in file: " << type << endl;
+<         }
+<     }
+< }
+---
+>     title.erase(0, title.find_first_not_of(" \t"));
+>     title.erase(title.find_last_not_of(" \t") + 1);
+140,172c98,117
+< //add movie to inventory
+< void Inventory::addMovie(Movie* movie) {
+<     char type = movie->getType();
+<     //for sorting key
+<     string key;
+< 
+<     //generates sorting key based on type
+<     if (type == 'F') {
+<         //title and year for comedies
+<         //cast to derived type for use of derived class methods required for generating sorting key
+<         //also ensures compile time type checking
+<         Comedy* comedyMovie = static_cast<Comedy*>(movie);
+<         key = comedyMovie->getTitle() + " " + to_string(comedyMovie->getYear());
+<     } else if (type == 'D') {
+<         //director and title for dramas
+<         Drama* dramaMovie = static_cast<Drama*>(movie);
+<         key = dramaMovie->getDirector() + " " + dramaMovie->getTitle();
+<     } else if (type == 'C') {
+<         //release date and major actor for classics
+<         Classic* classicMovie = static_cast<Classic*>(movie);
+<         key = to_string(classicMovie->getYear()) + " " + to_string(classicMovie->getMonth()) + " " + classicMovie->getMajorActor();
+<     } else {
+<         //invalid movie type
+<         cerr << "Invalid movie type" << type << endl;
+<         delete movie;
+<         return;
+<     }
+<     
+<     //add movie to appropriate map
+<     if (type == 'F') {
+<         addMovieToMap(movie, comedyMap, key);
+<     } else if (type == 'D') {
+<         addMovieToMap(movie, dramaMap, key);
+---
+>     // checks if the movie is a Comedy or Drama
+>     if (type == 'F' || type == 'D') {
+>       // reads the year from our string stream, with error when not found
+>       if (!(iss >> year)) {
+>         cerr << "Invalid format: missing year in line: " << line << endl;
+>         continue;
+>       }
+> 
+>       // creates a new comedy or or drama object
+>       // cast to Movie type, store in movie pointer, achieves late binding
+>       // allowing the full utilization of virtual overidden functions in derived
+>       // classes
+>       Movie *movie =
+>           (type == 'F')
+>               ? static_cast<Movie *>(new Comedy(stock, director, title, year))
+>               : static_cast<Movie *>(new Drama(stock, director, title, year));
+> 
+>       addMovie(movie);
+> 
+>       // checks if movie is a Classic
+174c119,139
+<         addMovieToMap(movie, classicMap, key);
+---
+>       // skips leading white spaces
+>       iss >> ws;
+>       // reads major actors first and last name, as well as month and year of
+>       // release, from string stream prints error if attributes are missing and
+>       // skips to next movie
+>       if (!(getline(iss, firstName, ' ') && iss >> lastName >> month >> year)) {
+>         cerr << "Invalid format: missing major actor, month or year in line: "
+>              << line << endl;
+>         continue;
+>       }
+> 
+>       majorActor = firstName + " " + lastName;
+>       // remove leading and trailing spaces from majorActor
+>       majorActor.erase(0, majorActor.find_first_not_of(" \t"));
+>       majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
+> 
+>       // create classic, cast to movie, store in movie pointer, achieves late
+>       // binding
+>       Movie *movie = static_cast<Movie *>(
+>           new Classic(stock, director, title, majorActor, month, year));
+>       addMovie(movie);
+176,177c141,142
+<         cerr << "Invalid Movie Type: " << type << endl;
+<         delete movie;
+---
+>       // invalid movie type
+>       cerr << "Invalid movie type in file: " << type << endl;
+178a144
+>   }
+180,197d145
+< //finds a movie in the inventory
+< Movie* Inventory::findMovie(char type, const string& attributes) const {
+<     //determines correct map to search based on movie type
+<     const map<string, Movie*>* movieMap;
+<     if (type == 'F') {
+<         movieMap = &comedyMap;
+<     } else if (type == 'D') {
+<         movieMap = &dramaMap;
+<     } else if (type == 'C') {
+<         movieMap = &classicMap;
+<     } else {
+<         //invalid movie type
+<         cerr << "Invalid movie type: " << type << endl;
+<         return nullptr;
+<     }
+< 
+<     //generates key for movie searches
+<     string key = parseAttributes(type, attributes);
+199,209c147,218
+<     //finds the movie in the map
+<     auto it = movieMap->find(key);
+< 
+<     //returns found movie or nullptr if not found
+<     if (it != movieMap->end()) {
+<         cout << "Found movie with key: " << key << endl;
+<         return it->second;
+<     } else {
+<         cout << "Movie with key: " << key << " not found." << endl;
+<         return nullptr;
+<     }
+---
+> // add movie to inventory
+> void Inventory::addMovie(Movie *movie) {
+>   char type = movie->getType();
+>   // for sorting key
+>   string key;
+> 
+>   // generates sorting key based on type
+>   if (type == 'F') {
+>     // title and year for comedies
+>     // cast to derived type for use of derived class methods required for
+>     // generating sorting key also ensures compile time type checking
+>     Comedy *comedyMovie = static_cast<Comedy *>(movie);
+>     key = comedyMovie->getTitle() + " " + to_string(comedyMovie->getYear());
+>   } else if (type == 'D') {
+>     // director and title for dramas
+>     Drama *dramaMovie = static_cast<Drama *>(movie);
+>     key = dramaMovie->getDirector() + " " + dramaMovie->getTitle();
+>   } else if (type == 'C') {
+>     // release date and major actor for classics
+>     Classic *classicMovie = static_cast<Classic *>(movie);
+>     key = to_string(classicMovie->getYear()) + " " +
+>           to_string(classicMovie->getMonth()) + " " +
+>           classicMovie->getMajorActor();
+>   } else {
+>     // invalid movie type
+>     cerr << "Invalid movie type" << type << endl;
+>     delete movie;
+>     return;
+>   }
+> 
+>   // add movie to appropriate map
+>   if (type == 'F') {
+>     addMovieToMap(movie, comedyMap, key);
+>   } else if (type == 'D') {
+>     addMovieToMap(movie, dramaMap, key);
+>   } else if (type == 'C') {
+>     addMovieToMap(movie, classicMap, key);
+>   } else {
+>     cerr << "Invalid Movie Type: " << type << endl;
+>     delete movie;
+>   }
+> }
+> // finds a movie in the inventory
+> Movie *Inventory::findMovie(char type, const string &attributes) const {
+>   // determines correct map to search based on movie type
+>   const map<string, Movie *> *movieMap;
+>   if (type == 'F') {
+>     movieMap = &comedyMap;
+>   } else if (type == 'D') {
+>     movieMap = &dramaMap;
+>   } else if (type == 'C') {
+>     movieMap = &classicMap;
+>   } else {
+>     // invalid movie type
+>     cerr << "Invalid movie type: " << type << endl;
+>     return nullptr;
+>   }
+> 
+>   // generates key for movie searches
+>   string key = parseAttributes(type, attributes);
+> 
+>   // finds the movie in the map
+>   auto it = movieMap->find(key);
+> 
+>   // returns found movie or nullptr if not found
+>   if (it != movieMap->end()) {
+>     cout << "Found movie with key: " << key << endl;
+>     return it->second;
+>   } else {
+>     cout << "Movie with key: " << key << " not found." << endl;
+>     return nullptr;
+>   }
+212c221
+< //displays inventory
+---
+> // displays inventory
+214,215c223,224
+<     cout << "Inventory:\n";
+<     cout << "Comedies:\n";
+---
+>   cout << "Inventory:\n";
+>   cout << "Comedies:\n";
+217,231c226,240
+<     //iterates over the appropriate vector and displays each movie
+<     for (const auto& pair : comedyMap) {
+<         pair.second->display();
+<         cout << endl;
+<     }
+<     cout << "Dramas:\n";
+<     for (const auto& pair : dramaMap) {
+<         pair.second->display();
+<         cout << endl;
+<     }
+<     cout << "Classics:\n";
+<     for (const auto& pair : classicMap) {
+<         pair.second->display();
+<         cout << endl;
+<     }
+---
+>   // iterates over the appropriate vector and displays each movie
+>   for (const auto &pair : comedyMap) {
+>     pair.second->display();
+>     cout << endl;
+>   }
+>   cout << "Dramas:\n";
+>   for (const auto &pair : dramaMap) {
+>     pair.second->display();
+>     cout << endl;
+>   }
+>   cout << "Classics:\n";
+>   for (const auto &pair : classicMap) {
+>     pair.second->display();
+>     cout << endl;
+>   }
+234,257c243,267
+< //helper function for parsing movie attributes for finding and sorting
+< string Inventory::parseAttributes(char type, const string& attributes) const {
+<     //for comedies and dramas we'll use title and year/director and title as the key
+<     if (type == 'F' || type == 'D') {
+<         return attributes;
+<     } else if (type == 'C') {
+<         istringstream iss(attributes);
+<         string majorActor;
+<         int month, year;
+< 
+<         //parses month and year
+<         iss >> month >> year;
+<         //parses major actor
+<         getline(iss, majorActor);
+< 
+<         //remove leading and trailing spaces from major actor
+<         majorActor.erase(0, majorActor.find_first_not_of(" \t"));
+<         majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
+<         
+<         //creates the key and returns it or empty string if invalid or missing type
+<         return to_string(year) + " " + to_string(month) + " " + majorActor;
+<     } else {
+<         return "";
+<     }
+---
+> // helper function for parsing movie attributes for finding and sorting
+> string Inventory::parseAttributes(char type, const string &attributes) const {
+>   // for comedies and dramas we'll use title and year/director and title as the
+>   // key
+>   if (type == 'F' || type == 'D') {
+>     return attributes;
+>   } else if (type == 'C') {
+>     istringstream iss(attributes);
+>     string majorActor;
+>     int month, year;
+> 
+>     // parses month and year
+>     iss >> month >> year;
+>     // parses major actor
+>     getline(iss, majorActor);
+> 
+>     // remove leading and trailing spaces from major actor
+>     majorActor.erase(0, majorActor.find_first_not_of(" \t"));
+>     majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
+> 
+>     // creates the key and returns it or empty string if invalid or missing type
+>     return to_string(year) + " " + to_string(month) + " " + majorActor;
+>   } else {
+>     return "";
+>   }
+260,263c270,274
+< //helper function to add movie to the appropriate map
+< void Inventory::addMovieToMap(Movie* movie, map<string, Movie*>& moviemap, const string& key) {
+<     //adds movie to map with its new key
+<     moviemap[key] = movie;
+---
+> // helper function to add movie to the appropriate map
+> void Inventory::addMovieToMap(Movie *movie, map<string, Movie *> &moviemap,
+>                               const string &key) {
+>   // adds movie to map with its new key
+>   moviemap[key] = movie;
+Running clang-format on ./Movie.cpp
+3,5c3,5
+< //virtual desctructor for proper cleanup 
+< //for deleting derived class objects
+< Movie::~Movie() {
+---
+> // virtual desctructor for proper cleanup
+> // for deleting derived class objects
+> Movie::~Movie() {}
+7c7,8
+< }
+---
+> // display function is pure virtual
+> // implementation provided in dervied classes
+9,10c10,11
+< //display function is pure virtual
+< //implementation provided in dervied classes
+---
+> // returns type of movie, F, D or C
+> char Movie::getType() const { return type; }
+12,15c13,14
+< //returns type of movie, F, D or C
+< char Movie::getType() const {
+<     return type;
+< }
+---
+> // returns number of copies in stock
+> int Movie::getStock() const { return stock; }
+17,25c16,17
+< //returns number of copies in stock
+< int Movie::getStock() const {
+<     return stock;
+< }
+< 
+< //increase stock count, occurs when movie is returned
+< void Movie::increaseStock(int count) {
+<     stock += count;
+< }
+---
+> // increase stock count, occurs when movie is returned
+> void Movie::increaseStock(int count) { stock += count; }
+27c19
+< //decrease stock count, occurs when a movie is borrowed
+---
+> // decrease stock count, occurs when a movie is borrowed
+29,35c21,27
+<     //only decrease if there was a copy available to borrow
+<     if (stock > 0) {
+<         stock--;
+<         return true;
+<     }
+<     //no stock to decrease
+<     return false;
+---
+>   // only decrease if there was a copy available to borrow
+>   if (stock > 0) {
+>     stock--;
+>     return true;
+>   }
+>   // no stock to decrease
+>   return false;
+38,41c30,31
+< //returns name of director
+< string Movie::getDirector() const {
+<     return director;
+< }
+---
+> // returns name of director
+> string Movie::getDirector() const { return director; }
+43,46c33,34
+< //returns title of movie
+< string Movie::getTitle() const {
+<     return title;
+< }
+---
+> // returns title of movie
+> string Movie::getTitle() const { return title; }
+48c36
+< //COMEDY
+---
+> // COMEDY
+51,72c39,61
+<     cout << "Type: Comedy\n"
+<     << "Title: " << title << "\n"
+<     << "Director: " << director << "\n"
+<     << "Year: " << year << "\n"
+<     << "Stock: " << stock << endl;
+< }
+< 
+< //to ensure being able to compare generic 'Movie' types possibly
+< //we need to use Movie& as object type here then static cast to 'Comedy'
+< //also allowing us to store all movies in single container and perform
+< //generic operations on them in the future
+< //these operators also need to access fields specific to derived classes
+< //based on title and year
+< bool Comedy::operator==(const Movie& other) const {
+<     const Comedy& otherComedy = static_cast<const Comedy&>(other);
+<     return title == otherComedy.title && year == otherComedy.year;
+< }
+< 
+< //based on title and THEN year
+< bool Comedy::operator<(const Movie& other) const {
+<     const Comedy& otherComedy = static_cast<const Comedy&>(other);
+<     return title < otherComedy.title || (title == otherComedy.title && year < otherComedy.year);
+---
+>   cout << "Type: Comedy\n"
+>        << "Title: " << title << "\n"
+>        << "Director: " << director << "\n"
+>        << "Year: " << year << "\n"
+>        << "Stock: " << stock << endl;
+> }
+> 
+> // to ensure being able to compare generic 'Movie' types possibly
+> // we need to use Movie& as object type here then static cast to 'Comedy'
+> // also allowing us to store all movies in single container and perform
+> // generic operations on them in the future
+> // these operators also need to access fields specific to derived classes
+> // based on title and year
+> bool Comedy::operator==(const Movie &other) const {
+>   const Comedy &otherComedy = static_cast<const Comedy &>(other);
+>   return title == otherComedy.title && year == otherComedy.year;
+> }
+> 
+> // based on title and THEN year
+> bool Comedy::operator<(const Movie &other) const {
+>   const Comedy &otherComedy = static_cast<const Comedy &>(other);
+>   return title < otherComedy.title ||
+>          (title == otherComedy.title && year < otherComedy.year);
+75,78c64,65
+< //returns year
+< int Comedy::getYear() const {
+<     return year;
+< }
+---
+> // returns year
+> int Comedy::getYear() const { return year; }
+80c67
+< //DRAMA
+---
+> // DRAMA
+83,87c70,75
+<     cout << "Type: Drama\n"
+<     << "Director: " << director << "\n"
+<     << "Title: " << title << "\n"
+<     << "Year: " << year << "\n"
+<     << "Stock: " << stock << "\n" << endl;
+---
+>   cout << "Type: Drama\n"
+>        << "Director: " << director << "\n"
+>        << "Title: " << title << "\n"
+>        << "Year: " << year << "\n"
+>        << "Stock: " << stock << "\n"
+>        << endl;
+90,93c78,81
+< //based on director and title
+< bool Drama::operator==(const Movie& other) const {
+<     const Drama& otherDrama = static_cast<const Drama&>(other);
+<     return director == otherDrama.director && title == otherDrama.title;
+---
+> // based on director and title
+> bool Drama::operator==(const Movie &other) const {
+>   const Drama &otherDrama = static_cast<const Drama &>(other);
+>   return director == otherDrama.director && title == otherDrama.title;
+96,99c84,88
+< //based on director THEN title
+< bool Drama::operator<(const Movie& other) const {
+<     const Drama& otherDrama = static_cast<const Drama&>(other);
+<     return director < otherDrama.director || (director == otherDrama.director && title < otherDrama.title);
+---
+> // based on director THEN title
+> bool Drama::operator<(const Movie &other) const {
+>   const Drama &otherDrama = static_cast<const Drama &>(other);
+>   return director < otherDrama.director ||
+>          (director == otherDrama.director && title < otherDrama.title);
+102c91
+< //CLASSIC
+---
+> // CLASSIC
+105,122c94,115
+<     cout << "Type: Classic\n"
+<     << "Director: " << director << "\n"
+<     << "Title: " << title << "\n"
+<     << "Major Actor: " << majorActor << "\n"
+<     << "Date: " << month << " " << year << "\n"
+<     << "Stock: " << stock << endl;
+< }
+< 
+< //based on release date and major actor
+< bool Classic::operator==(const Movie& other) const {
+<     const Classic& otherClassic = static_cast<const Classic&>(other);
+<     return year == otherClassic.year && month == otherClassic.month && majorActor == otherClassic.majorActor;
+< }
+< 
+< //based on release date THEN major actor
+< bool Classic::operator<(const Movie& other) const {
+<     const Classic& otherClassic = static_cast<const Classic&>(other);
+<     return year < otherClassic.year || (year == otherClassic.year && (month < otherClassic.month || (month == otherClassic.month && majorActor < otherClassic.majorActor)));
+---
+>   cout << "Type: Classic\n"
+>        << "Director: " << director << "\n"
+>        << "Title: " << title << "\n"
+>        << "Major Actor: " << majorActor << "\n"
+>        << "Date: " << month << " " << year << "\n"
+>        << "Stock: " << stock << endl;
+> }
+> 
+> // based on release date and major actor
+> bool Classic::operator==(const Movie &other) const {
+>   const Classic &otherClassic = static_cast<const Classic &>(other);
+>   return year == otherClassic.year && month == otherClassic.month &&
+>          majorActor == otherClassic.majorActor;
+> }
+> 
+> // based on release date THEN major actor
+> bool Classic::operator<(const Movie &other) const {
+>   const Classic &otherClassic = static_cast<const Classic &>(other);
+>   return year < otherClassic.year || (year == otherClassic.year &&
+>                                       (month < otherClassic.month ||
+>                                        (month == otherClassic.month &&
+>                                         majorActor < otherClassic.majorActor)));
+125,128c118,119
+< //returns major actor
+< string Classic::getMajorActor() const {
+<     return majorActor;
+< }
+---
+> // returns major actor
+> string Classic::getMajorActor() const { return majorActor; }
+130,138c121,122
+< //returns release month
+< int Classic::getMonth() const {
+<     return month;
+< }
+< 
+< //returns release year
+< int Classic::getYear() const {
+<     return year;
+< }
+---
+> // returns release month
+> int Classic::getMonth() const { return month; }
+139a124,125
+> // returns release year
+> int Classic::getYear() const { return year; }
+Running clang-format on ./Transaction.cpp
+5,20c5,22
+< //virtual destructor ensuring that borrow and return destructors
+< //are called when deleting objects through base class pointer
+< Transaction::~Transaction() {
+< 
+< }
+< 
+< 
+< 
+< //returns type of transaction, useful for type dependant logic
+< char Transaction::getType() const {
+<     return type;
+< }
+< 
+< //returns string for displaying transaction details
+< string Transaction::getDescription() const {
+<     return description;
+---
+> // virtual destructor ensuring that borrow and return destructors
+> // are called when deleting objects through base class pointer
+> Transaction::~Transaction() {}
+> 
+> // returns type of transaction, useful for type dependant logic
+> char Transaction::getType() const { return type; }
+> 
+> // returns string for displaying transaction details
+> string Transaction::getDescription() const { return description; }
+> 
+> // BORROW
+> // constructor
+> Borrow::Borrow(Customer *customer, Movie *movie)
+>     : Transaction('B', ""), customer(customer), movie(movie) {
+>   if (customer && movie) {
+>     description =
+>         "Borrowed " + movie->getTitle() + " by " + customer->getFullName();
+>   }
+23,31c25
+< //BORROW
+< //constructor
+<  Borrow::Borrow(Customer* customer, Movie* movie) : Transaction('B', ""), customer(customer), movie(movie) {
+<     if (customer && movie) {
+<         description = "Borrowed " + movie->getTitle() + " by " + customer->getFullName();
+<     }
+<  } 
+< 
+< //execute borrow transaction
+---
+> // execute borrow transaction
+33,41c27,35
+<     if(movie->decreaseStock()) {
+<         //adds transaction to customer history of stock decrease successful
+<         customer->addTransaction(this);
+<     } else {
+<         //alerts if borrow not executed successfully
+<         cout << "Borrow denied, none in stock." << endl;
+<         return false;
+<     }
+<     return true;
+---
+>   if (movie->decreaseStock()) {
+>     // adds transaction to customer history of stock decrease successful
+>     customer->addTransaction(this);
+>   } else {
+>     // alerts if borrow not executed successfully
+>     cout << "Borrow denied, none in stock." << endl;
+>     return false;
+>   }
+>   return true;
+44c38
+< //display borrow transaction details, customer name and movie title
+---
+> // display borrow transaction details, customer name and movie title
+46c40,41
+<     cout << "Borrowed: " << movie->getTitle() << " by " << customer->getFullName();
+---
+>   cout << "Borrowed: " << movie->getTitle() << " by "
+>        << customer->getFullName();
+48,49c43,51
+< Movie* Borrow::getMovie() const {
+<     return movie;
+---
+> Movie *Borrow::getMovie() const { return movie; }
+> // RETURN
+> // constructor
+> Return::Return(Customer *customer, Movie *movie)
+>     : Transaction('R', ""), customer(customer), movie(movie) {
+>   if (customer && movie) {
+>     description =
+>         "Returned " + movie->getTitle() + " by " + customer->getFullName();
+>   }
+51,57d52
+< //RETURN
+< //constructor
+<  Return::Return(Customer* customer, Movie* movie) : Transaction('R', ""), customer(customer), movie(movie) {
+<     if (customer && movie) {
+<         description = "Returned " + movie->getTitle() + " by " + customer->getFullName();
+<     }
+<  } 
+59c54
+< //execute return transaction
+---
+> // execute return transaction
+61,69c56,64
+<     if(!(customer->hasActiveBorrow(movie))) {
+<         cout << "Error: Customer hasn't borrowed this movie" << endl;
+<         return false;
+<     }
+< 
+<     movie->increaseStock(1);
+<     //adds transaction to customers history
+<     customer->addTransaction(this);
+<     return true;
+---
+>   if (!(customer->hasActiveBorrow(movie))) {
+>     cout << "Error: Customer hasn't borrowed this movie" << endl;
+>     return false;
+>   }
+> 
+>   movie->increaseStock(1);
+>   // adds transaction to customers history
+>   customer->addTransaction(this);
+>   return true;
+72c67
+< //display return transaction details, customer name and movie title
+---
+> // display return transaction details, customer name and movie title
+74,77c69,70
+<     cout << "Returned: " << movie->getTitle() << " by " << customer->getFullName();
+< }
+< Movie* Return::getMovie() const {
+<     return movie;
+---
+>   cout << "Returned: " << movie->getTitle() << " by "
+>        << customer->getFullName();
+79c72
+< 
+---
+> Movie *Return::getMovie() const { return movie; }
+Running clang-format on ./main.cpp
+4,5d3
+< #include "Inventory.h"
+< #include "CustomerManager.h" 
+8d5
+< #include "Movie.h"
+9a7,9
+> #include "CustomerManager.h"
+> #include "Inventory.h"
+> #include "Movie.h"
+11d10
+< #include <iostream>
+13a13
+> #include <iostream>
+33c33
+< // Check that all movies were loaded
+---
+>   // Check that all movies were loaded
+40c40,41
+<   assert(inventory.findMovie('F', "National Lampoon's Animal House 1978") != nullptr);
+---
+>   assert(inventory.findMovie('F', "National Lampoon's Animal House 1978") !=
+>          nullptr);
+42c43,44
+<   assert(inventory.findMovie('D', "Barry Levinson Good Morning Vietnam") != nullptr);
+---
+>   assert(inventory.findMovie('D', "Barry Levinson Good Morning Vietnam") !=
+>          nullptr);
+44,46c46,51
+<   assert(inventory.findMovie('D', "Phillippe De Broca King of Hearts") != nullptr);
+<   assert(inventory.findMovie('D', "Steven Spielberg Schindler's List") != nullptr);
+<   assert(inventory.findMovie('D', "Jonathan Demme Silence of the Lambs") != nullptr);
+---
+>   assert(inventory.findMovie('D', "Phillippe De Broca King of Hearts") !=
+>          nullptr);
+>   assert(inventory.findMovie('D', "Steven Spielberg Schindler's List") !=
+>          nullptr);
+>   assert(inventory.findMovie('D', "Jonathan Demme Silence of the Lambs") !=
+>          nullptr);
+78c83
+<   Movie* youveGotMail = inventory.findMovie('F', "You've Got Mail 1998");
+---
+>   Movie *youveGotMail = inventory.findMovie('F', "You've Got Mail 1998");
+80c85,86
+<   assert(youveGotMail->getStock() == 9); // After several borrow and return transactions
+---
+>   assert(youveGotMail->getStock() ==
+>          9); // After several borrow and return transactions
+84,85c90,91
+<   //TEST MOVIE.CPP
+<   //instances of each movie type
+---
+>   // TEST MOVIE.CPP
+>   // instances of each movie type
+88c94,95
+<   Classic classicMovie(3, "Victor Fleming", "Gone with the Wind", "Clark Gable", 1, 1939);
+---
+>   Classic classicMovie(3, "Victor Fleming", "Gone with the Wind", "Clark Gable",
+>                        1, 1939);
+91c98
+<   //display tests
+---
+>   // display tests
+97c104
+<   //stock display/increase/decrease tests
+---
+>   // stock display/increase/decrease tests
+100c107
+<   assert(comedyMovie.getStock() ==9);
+---
+>   assert(comedyMovie.getStock() == 9);
+116c123
+<   //equality tests
+---
+>   // equality tests
+124,126c131,133
+<   //TEST TRANSACTION.CPP and CUSTOMER.CPP
+<   //borrows and returns
+<   Borrow* borrow1 = new Borrow(&customer, &comedyMovie);
+---
+>   // TEST TRANSACTION.CPP and CUSTOMER.CPP
+>   // borrows and returns
+>   Borrow *borrow1 = new Borrow(&customer, &comedyMovie);
+128c135
+<   Return* return1 = new Return(&customer, &comedyMovie);
+---
+>   Return *return1 = new Return(&customer, &comedyMovie);
+130c137
+<   Borrow* borrow2 = new Borrow(&customer, &dramaMovie);
+---
+>   Borrow *borrow2 = new Borrow(&customer, &dramaMovie);
+133c140
+<   //check history to see if borrows and returns are reflected in history
+---
+>   // check history to see if borrows and returns are reflected in history
+136c143
+<   //make sure borrows and returns altered stock
+---
+>   // make sure borrows and returns altered stock
+138,139c145,148
+<   cout << " " << comedyMovie.getTitle() << " - Stock: " << comedyMovie.getStock() << endl;
+<   cout << " " << dramaMovie.getTitle() << " - Stock: " << dramaMovie.getStock() << endl;
+---
+>   cout << " " << comedyMovie.getTitle()
+>        << " - Stock: " << comedyMovie.getStock() << endl;
+>   cout << " " << dramaMovie.getTitle() << " - Stock: " << dramaMovie.getStock()
+>        << endl;
+145c154
+<   //TEST INVENTORY.CPP
+---
+>   // TEST INVENTORY.CPP
+156,157c165,166
+< // Create inventory object
+< Inventory inventory1;
+---
+>   // Create inventory object
+>   Inventory inventory1;
+159,160c168,169
+< // Load movies from file
+< inventory1.loadMovies("data4movies.txt");
+---
+>   // Load movies from file
+>   inventory1.loadMovies("data4movies.txt");
+162,205c171,215
+< // Display inventory to visually check the loaded data
+< cout << "Displaying inventory loaded from file: " << endl;
+< inventory1.display();
+< 
+< // Add movies directly
+< Comedy* newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
+< Drama* newDrama = new Drama(6, "Martin Scorsese", "Goodfellas", 1990);
+< Classic* newClassic = new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
+< 
+< inventory1.addMovie(newComedy);
+< inventory1.addMovie(newDrama);
+< inventory1.addMovie(newClassic);
+< 
+< // Display inventory to visually check the loaded data
+< cout << "Displaying inventory after adding movies directly: " << endl;
+< inventory1.display();
+< 
+< // Find movies tests
+< Movie* foundComedy = inventory1.findMovie('F', "Spaceballs 1987");
+< Movie* foundDrama = inventory1.findMovie('D', "Martin Scorsese Goodfellas");
+< Movie* foundClassic = inventory1.findMovie('C', "5 1956 John Wayne");
+< 
+< // Assert that movies were found correctly
+< assert(foundComedy != nullptr);
+< assert(foundDrama != nullptr);
+< assert(foundClassic != nullptr);
+< 
+< // Check attributes of found movies
+< assert(foundComedy->getTitle() == "Spaceballs");
+< assert(static_cast<Comedy*>(foundComedy)->getYear() == 1987);
+< assert(foundDrama->getTitle() == "Goodfellas");
+< assert(static_cast<Drama*>(foundDrama)->getDirector() == "Martin Scorsese");
+< assert(foundClassic->getTitle() == "The Searchers");
+< assert(static_cast<Classic*>(foundClassic)->getMajorActor() == "John Wayne");
+< assert(static_cast<Classic*>(foundClassic)->getMonth() == 5);
+< assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
+< 
+< // Test invalid movie types
+< Movie* invalidMovie = inventory1.findMovie('X', "Some Invalid Movie");
+< assert(invalidMovie == nullptr);
+< 
+< // Test invalid movie search
+< Movie* notFoundMovie = inventory1.findMovie('F', "Non Existent Movie 2024");
+< assert(notFoundMovie == nullptr);
+---
+>   // Display inventory to visually check the loaded data
+>   cout << "Displaying inventory loaded from file: " << endl;
+>   inventory1.display();
+> 
+>   // Add movies directly
+>   Comedy *newComedy = new Comedy(8, "Mel Brooks", "Spaceballs", 1987);
+>   Drama *newDrama = new Drama(6, "Martin Scorsese", "Goodfellas", 1990);
+>   Classic *newClassic =
+>       new Classic(4, "John Ford", "The Searchers", "John Wayne", 5, 1956);
+> 
+>   inventory1.addMovie(newComedy);
+>   inventory1.addMovie(newDrama);
+>   inventory1.addMovie(newClassic);
+> 
+>   // Display inventory to visually check the loaded data
+>   cout << "Displaying inventory after adding movies directly: " << endl;
+>   inventory1.display();
+> 
+>   // Find movies tests
+>   Movie *foundComedy = inventory1.findMovie('F', "Spaceballs 1987");
+>   Movie *foundDrama = inventory1.findMovie('D', "Martin Scorsese Goodfellas");
+>   Movie *foundClassic = inventory1.findMovie('C', "5 1956 John Wayne");
+> 
+>   // Assert that movies were found correctly
+>   assert(foundComedy != nullptr);
+>   assert(foundDrama != nullptr);
+>   assert(foundClassic != nullptr);
+> 
+>   // Check attributes of found movies
+>   assert(foundComedy->getTitle() == "Spaceballs");
+>   assert(static_cast<Comedy *>(foundComedy)->getYear() == 1987);
+>   assert(foundDrama->getTitle() == "Goodfellas");
+>   assert(static_cast<Drama *>(foundDrama)->getDirector() == "Martin Scorsese");
+>   assert(foundClassic->getTitle() == "The Searchers");
+>   assert(static_cast<Classic *>(foundClassic)->getMajorActor() == "John Wayne");
+>   assert(static_cast<Classic *>(foundClassic)->getMonth() == 5);
+>   assert(static_cast<Classic *>(foundClassic)->getYear() == 1956);
+> 
+>   // Test invalid movie types
+>   Movie *invalidMovie = inventory1.findMovie('X', "Some Invalid Movie");
+>   assert(invalidMovie == nullptr);
+> 
+>   // Test invalid movie search
+>   Movie *notFoundMovie = inventory1.findMovie('F', "Non Existent Movie 2024");
+>   assert(notFoundMovie == nullptr);
+207c217
+< cout << "All inventory tests have passed!" << endl;
+---
+>   cout << "All inventory tests have passed!" << endl;
+211c221
+<   //constructor/map initialization test
+---
+>   // constructor/map initialization test
+213,215c223,225
+<   //Test for:
+<   //CustomerManager: loadCustomers, findCustomers, addCustomer
+<   //CustomerHashMap: add, retrieve, rehash, hash
+---
+>   // Test for:
+>   // CustomerManager: loadCustomers, findCustomers, addCustomer
+>   // CustomerHashMap: add, retrieve, rehash, hash
+217,218c227,230
+<   assert(mang.findCustomer(1111) != nullptr && mang.findCustomer(3333) != nullptr && mang.findCustomer(2000) != nullptr); 
+<   //bad file test
+---
+>   assert(mang.findCustomer(1111) != nullptr &&
+>          mang.findCustomer(3333) != nullptr &&
+>          mang.findCustomer(2000) != nullptr);
+>   // bad file test
+220c232
+<   //Find nonexistant customer test
+---
+>   // Find nonexistant customer test
+222c234
+<   //Display test, check visually
+---
+>   // Display test, check visually
+228,229d239
+< 
+< 
+Running clang-format on ./store_test.cpp
+7a8,9
+> #include <cassert>
+> #include <fstream>
+11,12d12
+< #include <fstream>
+< #include <cassert>
+=====================================================
+5. No memory leaks using g++
+=====================================================
+=====================================================
+6. No memory leaks using valgrind, look for "definitely lost" 
+=====================================================
+==38671== Memcheck, a memory error detector
+==38671== Copyright (C) 2002-2022, and GNU GPL'd, by Julian Seward et al.
+==38671== Using Valgrind-3.21.0 and LibVEX; rerun with -h for copyright info
+==38671== Command: ./a.out
+==38671== Parent PID: 38217
+==38671== 
+==38671== Conditional jump or move depends on uninitialised value(s)
+==38671==    at 0x40411A: CustomHashMap::add(Customer*) (CustomHashMap.cpp:31)
+==38671==    by 0x408980: CustomerManager::addCustomer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:76)
+==38671==    by 0x408654: CustomerManager::loadCustomers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:32)
+==38671==    by 0x40D85E: main (main.cpp:30)
+==38671== 
+==38671== Conditional jump or move depends on uninitialised value(s)
+==38671==    at 0x40411A: CustomHashMap::add(Customer*) (CustomHashMap.cpp:31)
+==38671==    by 0x408980: CustomerManager::addCustomer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:76)
+==38671==    by 0x40872E: CustomerManager::loadCustomers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:49)
+==38671==    by 0x40D85E: main (main.cpp:30)
+==38671== 
+==38671== Conditional jump or move depends on uninitialised value(s)
+==38671==    at 0x40411A: CustomHashMap::add(Customer*) (CustomHashMap.cpp:31)
+==38671==    by 0x408980: CustomerManager::addCustomer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:76)
+==38671==    by 0x408654: CustomerManager::loadCustomers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:32)
+==38671==    by 0x40FDB5: main (main.cpp:216)
+==38671== 
+==38671== Conditional jump or move depends on uninitialised value(s)
+==38671==    at 0x40411A: CustomHashMap::add(Customer*) (CustomHashMap.cpp:31)
+==38671==    by 0x408980: CustomerManager::addCustomer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:76)
+==38671==    by 0x40872E: CustomerManager::loadCustomers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (CustomerManager.cpp:49)
+==38671==    by 0x40FDB5: main (main.cpp:216)
+==38671== 
+==38671== 
+==38671== HEAP SUMMARY:
+==38671==     in use at exit: 0 bytes in 0 blocks
+==38671==   total heap usage: 1,358 allocs, 1,358 frees, 225,021 bytes allocated
+==38671== 
+==38671== All heap blocks were freed -- no leaks are possible
+==38671== 
+==38671== Use --track-origins=yes to see where uninitialised values come from
+==38671== For lists of detected and suppressed errors, rerun with: -s
+==38671== ERROR SUMMARY: 24 errors from 4 contexts (suppressed: 0 from 0)
+=====================================================
+7. Tests have full code coverage
+=====================================================
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/CommandProcessor.cpp':
+Name                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CommandProcessor::CommandProcessor(Inventory&, CustomerManager&)                                                                                       1       0 100.00%         1       0 100.00%         0       0   0.00%
+CommandProcessor::processCommands(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)                               8       1  87.50%        13       3  76.92%         6       2  66.67%
+CommandProcessor::processCommandString(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)                          6       0 100.00%        42       4  90.48%        10       0 100.00%
+CommandProcessor::processBorrowCommand(int, char, char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)        12       0 100.00%        21       0 100.00%         8       0 100.00%
+CommandProcessor::processReturnCommand(int, char, char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)        12       4  66.67%        21      11  47.62%         8       4  50.00%
+CommandProcessor::processInventoryCommand()                                                                                                            1       0 100.00%         3       0 100.00%         0       0   0.00%
+CommandProcessor::processHistoryCommand(int)                                                                                                           4       1  75.00%         8       3  62.50%         2       1  50.00%
+CommandProcessor::removeCommasAndLeadingSpace(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>)                          4       0 100.00%        11       0 100.00%         4       0 100.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                 48       6  87.50%       120      21  82.50%        38       7  81.58%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/CustomHashMap.cpp':
+Name                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CustomHashMap::CustomHashMap()                                                                                                                         1       0 100.00%         4       0 100.00%         0       0   0.00%
+CustomHashMap::getSize()                                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+CustomHashMap::add(Customer*)                                                                                                                          7       1  85.71%        14       2  85.71%         6       1  83.33%
+CustomHashMap::hash(int) const                                                                                                                         1       0 100.00%         3       0 100.00%         0       0   0.00%
+CustomHashMap::retrieve(int) const                                                                                                                     5       0 100.00%         8       0 100.00%         4       0 100.00%
+CustomHashMap::display() const                                                                                                                         5       0 100.00%         7       0 100.00%         4       0 100.00%
+CustomHashMap::rehash()                                                                                                                                5       0 100.00%        14       0 100.00%         4       0 100.00%
+CustomHashMap::~CustomHashMap()                                                                                                                        5       0 100.00%         7       0 100.00%         4       0 100.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                 30       1  96.67%        60       2  96.67%        22       1  95.45%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/Customer.cpp':
+Name                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Customer::addTransaction(Transaction const*)                                                                                                           1       0 100.00%         3       0 100.00%         0       0   0.00%
+Customer::displayHistory() const                                                                                                                       2       0 100.00%         7       0 100.00%         2       0 100.00%
+Customer::hasActiveBorrow(Movie*)                                                                                                                     14       1  92.86%        15       2  86.67%        12       4  66.67%
+Customer::getID() const                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+Customer::getFullName[abi:cxx11]() const                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+Customer::~Customer()                                                                                                                                  2       0 100.00%         5       0 100.00%         2       0 100.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                 21       1  95.24%        36       2  94.44%        16       4  75.00%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/CustomerManager.cpp':
+Name                                                                                                                                                                                                              Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CustomerManager::loadCustomers(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)                                                                                                  12       2  83.33%        41       4  90.24%         4       0 100.00%
+CustomerManager::findCustomer(int) const                                                                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+CustomerManager::displayCustomers() const                                                                                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+CustomerManager::addCustomer(int, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)         1       0 100.00%         4       0 100.00%         0       0   0.00%
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                  15       2  86.67%        51       4  92.16%         4       0 100.00%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/Inventory.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Inventory::~Inventory()                                                                                                                                                                                                                                                                                                                                                                                                                                4       0 100.00%        11       0 100.00%         6       0 100.00%
+Inventory::loadMovies(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)                                                                                                                                                                                                                                                                                                                                          40       7  82.50%        63      21  66.67%        28       8  71.43%
+Inventory::addMovie(Movie*)                                                                                                                                                                                                                                                                                                                                                                                                                           20       2  90.00%        28       7  75.00%        12       2  83.33%
+Inventory::findMovie(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const                                                                                                                                                                                                                                                                                                                               14       0 100.00%        22       0 100.00%         8       0 100.00%
+Inventory::display() const                                                                                                                                                                                                                                                                                                                                                                                                                             4       0 100.00%        18       0 100.00%         6       0 100.00%
+Inventory::parseAttributes(char, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&) const                                                                                                                                                                                                                                                                                                                          9       1  88.89%        16       2  87.50%         6       1  83.33%
+Inventory::addMovieToMap(Movie*, std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>, Movie*, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>>, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const, Movie*>>>&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>> const&)         1       0 100.00%         3       0 100.00%         0       0   0.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                                                                 92      10  89.13%       161      30  81.37%        66      11  83.33%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/Movie.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Movie::~Movie()                                                                                                                                                                                                                                                                                                                                                                                                                                        1       0 100.00%         2       0 100.00%         0       0   0.00%
+Movie::getType() const                                                                                                                                                                                                                                                                                                                                                                                                                                 1       0 100.00%         3       0 100.00%         0       0   0.00%
+Movie::getStock() const                                                                                                                                                                                                                                                                                                                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+Movie::increaseStock(int)                                                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%         3       0 100.00%         0       0   0.00%
+Movie::decreaseStock()                                                                                                                                                                                                                                                                                                                                                                                                                                 4       0 100.00%         7       0 100.00%         2       0 100.00%
+Movie::getDirector[abi:cxx11]() const                                                                                                                                                                                                                                                                                                                                                                                                                  1       0 100.00%         3       0 100.00%         0       0   0.00%
+Movie::getTitle[abi:cxx11]() const                                                                                                                                                                                                                                                                                                                                                                                                                     1       0 100.00%         3       0 100.00%         0       0   0.00%
+Comedy::display() const                                                                                                                                                                                                                                                                                                                                                                                                                                1       0 100.00%         7       0 100.00%         0       0   0.00%
+Comedy::operator==(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                 3       3   0.00%         4       4   0.00%         4       4   0.00%
+Comedy::operator<(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                  5       5   0.00%         4       4   0.00%         6       6   0.00%
+Comedy::getYear() const                                                                                                                                                                                                                                                                                                                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+Drama::display() const                                                                                                                                                                                                                                                                                                                                                                                                                                 1       0 100.00%         7       0 100.00%         0       0   0.00%
+Drama::operator==(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                  3       0 100.00%         4       0 100.00%         4       1  75.00%
+Drama::operator<(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                   5       5   0.00%         4       4   0.00%         6       6   0.00%
+Classic::display() const                                                                                                                                                                                                                                                                                                                                                                                                                               1       0 100.00%         8       0 100.00%         0       0   0.00%
+Classic::operator==(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                5       5   0.00%         4       4   0.00%         6       6   0.00%
+Classic::operator<(Movie const&) const                                                                                                                                                                                                                                                                                                                                                                                                                 9       9   0.00%         4       4   0.00%        10      10   0.00%
+Classic::getMajorActor[abi:cxx11]() const                                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%         3       0 100.00%         0       0   0.00%
+Classic::getMonth() const                                                                                                                                                                                                                                                                                                                                                                                                                              1       0 100.00%         3       0 100.00%         0       0   0.00%
+Classic::getYear() const                                                                                                                                                                                                                                                                                                                                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                                                                 47      27  42.55%        82      20  75.61%        38      33  13.16%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/Transaction.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Transaction::~Transaction()                                                                                                                                                                                                                                                                                                                                                                                                                            1       0 100.00%         2       0 100.00%         0       0   0.00%
+Transaction::getType() const                                                                                                                                                                                                                                                                                                                                                                                                                           1       0 100.00%         3       0 100.00%         0       0   0.00%
+Transaction::getDescription[abi:cxx11]() const                                                                                                                                                                                                                                                                                                                                                                                                         1       1   0.00%         3       3   0.00%         0       0   0.00%
+Borrow::Borrow(Customer*, Movie*)                                                                                                                                                                                                                                                                                                                                                                                                                      5       0 100.00%         5       0 100.00%         4       2  50.00%
+Borrow::execute()                                                                                                                                                                                                                                                                                                                                                                                                                                      5       0 100.00%         9       0 100.00%         2       0 100.00%
+Borrow::display() const                                                                                                                                                                                                                                                                                                                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+Borrow::getMovie() const                                                                                                                                                                                                                                                                                                                                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+Return::Return(Customer*, Movie*)                                                                                                                                                                                                                                                                                                                                                                                                                      5       0 100.00%         5       0 100.00%         4       2  50.00%
+Return::execute()                                                                                                                                                                                                                                                                                                                                                                                                                                      4       1  75.00%         9       3  66.67%         2       1  50.00%
+Return::display() const                                                                                                                                                                                                                                                                                                                                                                                                                                1       0 100.00%         3       0 100.00%         0       0   0.00%
+Return::getMovie() const                                                                                                                                                                                                                                                                                                                                                                                                                               1       0 100.00%         3       0 100.00%         0       0   0.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                                                                 26       2  92.31%        48       6  87.50%        12       5  58.33%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/main.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+main                                                                                                                                                                                                                                                                                                                                                                                                                                                   4       1  75.00%       141      73  48.23%         2       1  50.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                                                                  4       1  75.00%       141      73  48.23%         2       1  50.00%
+
+File '/home/cssuwbstudent/freds333/Spring2024folder/FredMathewAss4-movie-starter/store_test.cpp':
+Name                                                                                                                                                                                                                                                                                                                                                                                                                                             Regions    Miss   Cover     Lines    Miss   Cover  Branches    Miss   Cover
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+testStore1()                                                                                                                                                                                                                                                                                                                                                                                                                                           3       3   0.00%        17      17   0.00%         2       2   0.00%
+testStore2()                                                                                                                                                                                                                                                                                                                                                                                                                                           1       1   0.00%         4       4   0.00%         0       0   0.00%
+testStoreFinal()                                                                                                                                                                                                                                                                                                                                                                                                                                       1       1   0.00%         6       6   0.00%         0       0   0.00%
+testAll()                                                                                                                                                                                                                                                                                                                                                                                                                                              1       1   0.00%         5       5   0.00%         0       0   0.00%
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TOTAL                                                                                                                                                                                                                                                                                                                                                                                                                                                  6       6   0.00%        32      32   0.00%         2       2   0.00%
+=====================================================
+The lines below were never executed
+=====================================================
+   12|      0|        cerr << "Error: could not open file " << filename << endl;
+   13|      0|        return;
+   14|      0|    }
+   51|      0|        }
+   68|      0|        }
+   73|      0|        }
+   82|      0|        }
+  128|      0|        cerr << "Error: Invalid media type " << mediaType << " for borrow command." << endl;
+  129|      0|        return;
+  130|      0|    }
+  136|      0|        cerr << "Error: customer ID " << customerID << " not found." << endl;
+  137|      0|        return;
+  138|      0|    }
+  145|      0|        cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
+  146|      0|        return;
+  147|      0|    }
+  154|      0|        delete returnTransaction;
+  155|      0|    }
+  169|      0|        cerr << "Error: customer ID " << customerID << " not found." << endl;
+  170|      0|        return;
+  171|      0|    }
+   22|      0|            return false;
+   23|      0|        }
+   32|      0|    else   
+   33|      0|        return false;
+   36|      0|        cout << "Error: Invalid Customer ID" << endl;
+   38|      0|    }
+   53|      0|            cout << "Error: Invalid Customer ID" << endl;
+   55|      0|        }
+   33|      0|        cerr << "Error: could not open file " << filename << endl;
+   34|      0|        return;
+   35|      0|    }
+   61|      0|            cerr << "Invalid format: missing type in line: " << line << endl;
+   62|      0|            continue;
+   63|      0|        }
+   70|      0|            cerr << "Invalid format: missing stock in line: " << line << endl;
+   71|      0|            continue;
+   72|      0|        }
+   80|      0|            cerr << "Invalid format: missing director in line: " << line << endl;
+   81|      0|            continue;
+   82|      0|        }
+   87|      0|            cerr << "Invalid format: missing title in line: " << line << endl;
+   88|      0|            continue;
+   89|      0|        }
+  102|      0|                cerr << "Invalid format: missing year in line: " << line << endl;
+  103|      0|                continue;
+  104|      0|            }
+  121|      0|                cerr << "Invalid format: missing major actor, month or year in line: " << line << endl;
+  122|      0|                continue;
+  123|      0|            }
+  163|      0|        cerr << "Invalid movie type" << type << endl;
+  164|      0|        delete movie;
+  165|      0|        return;
+  166|      0|    }
+  176|      0|        cerr << "Invalid Movie Type: " << type << endl;
+  177|      0|        delete movie;
+  178|      0|    }
+  256|      0|        return "";
+  257|      0|    }
+   64|      0|bool Comedy::operator==(const Movie& other) const {
+   65|      0|    const Comedy& otherComedy = static_cast<const Comedy&>(other);
+   66|      0|    return title == otherComedy.title && year == otherComedy.year;
+   67|      0|}
+   70|      0|bool Comedy::operator<(const Movie& other) const {
+   71|      0|    const Comedy& otherComedy = static_cast<const Comedy&>(other);
+   72|      0|    return title < otherComedy.title || (title == otherComedy.title && year < otherComedy.year);
+   73|      0|}
+   97|      0|bool Drama::operator<(const Movie& other) const {
+   98|      0|    const Drama& otherDrama = static_cast<const Drama&>(other);
+   99|      0|    return director < otherDrama.director || (director == otherDrama.director && title < otherDrama.title);
+  100|      0|}
+  114|      0|bool Classic::operator==(const Movie& other) const {
+  115|      0|    const Classic& otherClassic = static_cast<const Classic&>(other);
+  116|      0|    return year == otherClassic.year && month == otherClassic.month && majorActor == otherClassic.majorActor;
+  117|      0|}
+  120|      0|bool Classic::operator<(const Movie& other) const {
+  121|      0|    const Classic& otherClassic = static_cast<const Classic&>(other);
+  122|      0|    return year < otherClassic.year || (year == otherClassic.year && (month < otherClassic.month || (month == otherClassic.month && majorActor < otherClassic.majorActor)));
+  123|      0|}
+   19|      0|string Transaction::getDescription() const {
+   20|      0|    return description;
+   21|      0|}
+   62|      0|        cout << "Error: Customer hasn't borrowed this movie" << endl;
+   63|      0|        return false;
+   64|      0|    }
+   35|      0|  assert(inventory.findMovie('F', "Annie Hall 1977") != nullptr);
+   36|      0|  assert(inventory.findMovie('F', "When Harry Met Sally 1989") != nullptr);
+   37|      0|  assert(inventory.findMovie('F', "Pirates of the Caribbean 2003") != nullptr);
+   38|      0|  assert(inventory.findMovie('F', "Fargo 1996") != nullptr);
+   39|      0|  assert(inventory.findMovie('F', "You've Got Mail 1998") != nullptr);
+   40|      0|  assert(inventory.findMovie('F', "National Lampoon's Animal House 1978") != nullptr);
+   42|      0|  assert(inventory.findMovie('D', "Barry Levinson Good Morning Vietnam") != nullptr);
+   43|      0|  assert(inventory.findMovie('D', "Gus Van Sant Good Will Hunting") != nullptr);
+   44|      0|  assert(inventory.findMovie('D', "Phillippe De Broca King of Hearts") != nullptr);
+   45|      0|  assert(inventory.findMovie('D', "Steven Spielberg Schindler's List") != nullptr);
+   46|      0|  assert(inventory.findMovie('D', "Jonathan Demme Silence of the Lambs") != nullptr);
+   47|      0|  assert(inventory.findMovie('D', "Clint Eastwood Unforgiven") != nullptr);
+   48|      0|  assert(inventory.findMovie('D', "Nancy Savoca Dogfight") != nullptr);
+   50|      0|  assert(inventory.findMovie('C', "8 1942 Ingrid Bergman") != nullptr);
+   51|      0|  assert(inventory.findMovie('C', "8 1942 Humphrey Bogart") != nullptr);
+   52|      0|  assert(inventory.findMovie('C', "7 1939 Judy Garland") != nullptr);
+   53|      0|  assert(inventory.findMovie('C', "3 1971 Ruth Gordon") != nullptr);
+   54|      0|  assert(inventory.findMovie('C', "9 1938 Katherine Hepburn") != nullptr);
+   55|      0|  assert(inventory.findMovie('C', "9 1938 Cary Grant") != nullptr);
+   56|      0|  assert(inventory.findMovie('C', "2 1939 Vivien Leigh") != nullptr);
+   57|      0|  assert(inventory.findMovie('C', "2 1939 Clark Gable") != nullptr);
+   58|      0|  assert(inventory.findMovie('C', "5 1940 Katherine Hepburn") != nullptr);
+   59|      0|  assert(inventory.findMovie('C', "5 1940 Cary Grant") != nullptr);
+   60|      0|  assert(inventory.findMovie('C', "10 1941 Humphrey Bogart") != nullptr);
+   61|      0|  assert(inventory.findMovie('C', "11 1946 Donna Reed") != nullptr);
+   62|      0|  assert(inventory.findMovie('C', "2 1971 Malcolm McDowell") != nullptr);
+   65|      0|  assert(customerManager.findCustomer(3333) != nullptr);
+   66|      0|  assert(customerManager.findCustomer(8888) != nullptr);
+   67|      0|  assert(customerManager.findCustomer(4444) != nullptr);
+   68|      0|  assert(customerManager.findCustomer(9999) != nullptr);
+   69|      0|  assert(customerManager.findCustomer(6666) != nullptr);
+   70|      0|  assert(customerManager.findCustomer(7777) != nullptr);
+   71|      0|  assert(customerManager.findCustomer(1111) != nullptr);
+   72|      0|  assert(customerManager.findCustomer(1000) != nullptr);
+   73|      0|  assert(customerManager.findCustomer(9000) != nullptr);
+   74|      0|  assert(customerManager.findCustomer(8000) != nullptr);
+   75|      0|  assert(customerManager.findCustomer(5000) != nullptr);
+   76|      0|  assert(customerManager.findCustomer(2000) != nullptr);
+   78|      0|  Movie* youveGotMail = inventory.findMovie('F', "You've Got Mail 1998");
+   80|      0|  assert(youveGotMail->getStock() == 9); // After several borrow and return transactions
+   82|      0|  cout << "All command processor tests passed!" << endl;
+   99|      0|  comedyMovie.decreaseStock();
+  101|      0|  comedyMovie.increaseStock(1);
+  104|      0|  assert(dramaMovie.getStock() == 5);
+  105|      0|  dramaMovie.decreaseStock();
+  107|      0|  dramaMovie.increaseStock(1);
+  110|      0|  assert(classicMovie.getStock() == 3);
+  111|      0|  classicMovie.decreaseStock();
+  113|      0|  classicMovie.increaseStock(1);
+  117|      0|  Drama dramaMovie2(5, "Frank Darabont", "The Shawshank Redemption", 1994);
+  119|      0|  Drama dramaMovie3(5, "Christohper Nolan", "Inception", 2010);
+  122|      0|  cout << "All Movie tests passed!" << endl;
+  141|      0|  assert(dramaMovie.getStock() == 4);
+  143|      0|  cout << "All Transaction and Customer tests passed!" << endl;
+  150|      0|    cerr << "Error: could not open file " << filename << endl;
+  151|      0|    return 1;
+  152|      0|  }
+  186|      0|assert(foundDrama != nullptr);
+  187|      0|assert(foundClassic != nullptr);
+  190|      0|assert(foundComedy->getTitle() == "Spaceballs");
+  191|      0|assert(static_cast<Comedy*>(foundComedy)->getYear() == 1987);
+  192|      0|assert(foundDrama->getTitle() == "Goodfellas");
+  193|      0|assert(static_cast<Drama*>(foundDrama)->getDirector() == "Martin Scorsese");
+  194|      0|assert(foundClassic->getTitle() == "The Searchers");
+  195|      0|assert(static_cast<Classic*>(foundClassic)->getMajorActor() == "John Wayne");
+  196|      0|assert(static_cast<Classic*>(foundClassic)->getMonth() == 5);
+  197|      0|assert(static_cast<Classic*>(foundClassic)->getYear() == 1956);
+  200|      0|Movie* invalidMovie = inventory1.findMovie('X', "Some Invalid Movie");
+  204|      0|Movie* notFoundMovie = inventory1.findMovie('F', "Non Existent Movie 2024");
+  207|      0|cout << "All inventory tests have passed!" << endl;
+  216|      0|  mang.loadCustomers("data4customers.txt");
+  219|      0|  mang.loadCustomers("dfsdf");
+  223|      0|  mang.displayCustomers();
+   16|      0|void testStore1() {
+   17|      0|  cout << "Start testStore1" << endl;
+   20|      0|  string cfile = "testcommands-1.txt";
+   21|      0|  stringstream out;
+   22|      0|  ifstream fs(cfile);
+   23|      0|  assert(fs.is_open());
+   24|      0|  char commandType;
+   25|      0|  string discard;
+   26|      0|  while (fs >> commandType) {
+   27|      0|    out << commandType;
+   28|      0|    getline(fs, discard);
+   29|      0|  }
+   30|      0|  fs.close();
+   31|      0|  string result = "IHHBRIBBIH";
+   32|      0|  assert(out.str() == result);
+   33|      0|  cout << "End testStore1" << endl;
+   34|      0|}
+   36|      0|void testStore2() {
+   37|      0|  cout << "Start testStore2" << endl;
+   38|      0|  cout << "End testStore2" << endl;
+   39|      0|}
+   41|      0|void testStoreFinal() {
+   42|      0|  cout << "=====================================" << endl;
+   43|      0|  cout << "Start testStoreFinal" << endl;
+   44|      0|  cout << "End testStoreFinal" << endl;
+   45|      0|  cout << "=====================================" << endl;
+   46|      0|}
+   48|      0|void testAll() {
+   49|      0|  testStore1();
+   50|      0|  testStore2();
+   51|      0|  testStoreFinal();
+   52|      0|}
+Mon May 27 19:05:47 UTC 2024
+=====================================================
+To create an output.txt file with all the output from this script
+Run the below command
+      ./create-output.sh > output.txt 2>&1 
+=====================================================
