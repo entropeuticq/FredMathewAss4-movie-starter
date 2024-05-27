@@ -107,9 +107,6 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
     //finds movie by type and attributes
     Movie* movie = inventory.findMovie(movieType, attributes);
 
-    //debug statement
-    cout << "Borrow command - parsed attributes: " << attributes << endl;
-
     if (!movie) {
         //error if movie not found
         cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
@@ -140,9 +137,6 @@ void CommandProcessor::processReturnCommand(int customerID, char mediaType, char
         return;
     }
 
-
-    //debug statement
-    cout << "Return command - parsed attributes: " << attributes << endl;
 
     //finds movie by type and attributes
     Movie* movie = inventory.findMovie(movieType, attributes);
