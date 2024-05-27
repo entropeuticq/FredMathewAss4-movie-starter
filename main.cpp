@@ -30,7 +30,6 @@ int main() {
   customerManager.loadCustomers("data4customers.txt");
   CommandProcessor commandProcessor(inventory, customerManager);
   commandProcessor.processCommands("data4commands.txt");
-
 // Check that all movies were loaded
   assert(inventory.findMovie('F', "Sleepless in Seattle 1993") != nullptr);
   assert(inventory.findMovie('F', "Annie Hall 1977") != nullptr);
@@ -124,12 +123,12 @@ int main() {
 
   //TEST TRANSACTION.CPP and CUSTOMER.CPP
   //borrows and returns
-  Borrow borrow1(&customer, &comedyMovie);
-  borrow1.execute();
-  Return return1(&customer, &comedyMovie);
-  return1.execute();
-  Borrow borrow2(&customer, &dramaMovie);
-  borrow2.execute();
+  Borrow* borrow1 = new Borrow(&customer, &comedyMovie);
+  borrow1->execute();
+  Return* return1 = new Return(&customer, &comedyMovie);
+  return1->execute();
+  Borrow* borrow2 = new Borrow(&customer, &dramaMovie);
+  borrow2->execute();
 
   //check history to see if borrows and returns are reflected in history
   customer.displayHistory();
