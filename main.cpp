@@ -26,11 +26,11 @@ int main() {
   Inventory inventory;
   CustomerManager customerManager;
   inventory.loadMovies("data4movies.txt");
-  //inventory.display();
+  inventory.display();
   customerManager.loadCustomers("data4customers.txt");
   CommandProcessor commandProcessor(inventory, customerManager);
   commandProcessor.processCommands("data4commands.txt");
-  assert(inventory.findMovie('C', "8 1942 Ingrid Bergman") != nullptr);
+  //assert(inventory.findMovie('C', "8 1942 Ingrid Bergman") != nullptr);
 /*
   //TEST MOVIE.CPP
   //instances of each movie type

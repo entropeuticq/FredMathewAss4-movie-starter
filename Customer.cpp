@@ -27,3 +27,8 @@ string Customer::getFullName() const {
     return lastName + ", " + firstName;
 }
 
+Customer::~Customer() {
+    for (const auto& transaction : transactions) {
+        delete transaction;
+    }
+}
