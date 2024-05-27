@@ -61,7 +61,6 @@ void CustomHashMap::display() const{
 
 //Increases the size of the hash map by 10
 void CustomHashMap::rehash() {
-    int oldSize = map.size(); //size of the old map
     int index; //used within inner for loop to hold customer hashes
     size = size + 10; //the size of the new map
 
