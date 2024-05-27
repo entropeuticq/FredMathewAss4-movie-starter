@@ -1,3 +1,5 @@
+
+
 #ifndef INVENTORY_H
 #define INVENTORY_H
 
@@ -29,14 +31,14 @@ public:
     //each catagory will be sorted based on required sorting attributes
     void display() const;
 
+    string parseAttributes(char type, const string& attributes) const;
+
 private:
     //maps for storing movies based on type and sorting criteria
     map<string, Movie*> comedyMap;
     map<string, Movie*> dramaMap;
     map<string, Movie*> classicMap;
     
-    string parseAttributes(char type, const string& attributes) const;
-
     void addMovieToMap(Movie* movie, map<string, Movie*>& moviemap, const string& key);
 };
 
