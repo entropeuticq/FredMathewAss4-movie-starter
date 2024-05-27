@@ -95,9 +95,6 @@ void Inventory::loadMovies(const string& filename) {
         title.erase(0, title.find_first_not_of(" \t"));
         title.erase(title.find_last_not_of(" \t") + 1);
 
-        //debug statement
-        cout << "Parsed type: " << type << ", stock: " << stock << ", director: " << director << ", title: " << title << endl;
-
         //checks if the movie is a Comedy or Drama
         if (type == 'F' || type == 'D') {
             //reads the year from our string stream, with error when not found
@@ -105,9 +102,6 @@ void Inventory::loadMovies(const string& filename) {
                 cerr << "Invalid format: missing year in line: " << line << endl;
                 continue;
             }
-
-            //debug statement
-            cout << "Parsed year: " << year << endl;
 
             //creates a new comedy or or drama object
             //cast to Movie type, store in movie pointer, achieves late binding
@@ -133,9 +127,6 @@ void Inventory::loadMovies(const string& filename) {
             majorActor.erase(0, majorActor.find_first_not_of(" \t"));
             majorActor.erase(majorActor.find_last_not_of(" \t") + 1);
             
-            //debug statement
-            cout << "Parsed majorActor: " << majorActor << ", month: " << month << ", year: " << year << endl;
-
             //create classic, cast to movie, store in movie pointer, achieves late binding
             Movie* movie = static_cast<Movie*>(new Classic(stock, director, title, majorActor, month, year));
             addMovie(movie);
@@ -173,9 +164,6 @@ void Inventory::addMovie(Movie* movie) {
         delete movie;
         return;
     }
-
-    //debug statement
-    cout << "Generated key: " << key << " for type: " << type << endl;
     
     //add movie to appropriate map
     if (type == 'F') {
@@ -208,14 +196,8 @@ Movie* Inventory::findMovie(char type, const string& attributes) const {
     //generates key for movie searches
     string key = parseAttributes(type, attributes);
 
-    //debug statement
-    cout << "Parsed attributes into key: " << key << endl;
-
     //finds the movie in the map
     auto it = movieMap->find(key);
-
-    //debug statement
-    cout << "Searching for key: " << key << " in map of type: " << type << endl;
 
     //returns found movie or nullptr if not found
     if (it != movieMap->end()) {
