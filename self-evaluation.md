@@ -83,9 +83,15 @@ functions called when retrieving a comedy movie based on title and year: TODO(st
 
 functions called for retrieving and printing customer history: TODO(student)
 
-container used for customer history: TODO(student)
+container used for customer history: Customer::vector<const Transaction*> transactions
 
-functions called when borrowing a movie: TODO(student)
+functions called when borrowing a movie: 
+Main call stack:
+CommandProcessssor::processCommands-->CommandProcessssor::processCommandString-->CommandProcessssor::processBorrowCommand-->Borrow constructor
+->Borrow::execute-->Movie::decreaseStock()-->Customer::addTransaction
+Auxilary functions:
+CommandProcessor::removeCommasAndLeadingSpace CustomerManager::findCustomer CustomHashMap::retrieve CustomHashMap::Hash
+Inventory::findMovie Inventory::parseAttributes
 
 explain borrowing a movie that does not exist: TODO(student)
 
@@ -100,7 +106,7 @@ explain returning a movie that customer has not checked out:
 ->  execute() then determines the transaction is faulty and also returns false
 ->  CommandProcessor deletes the transaction object due to the false return
 
-any static_cast or dynamic_cast used: TODO(student)
+any static_cast or dynamic_cast used: Yes
 
 
 Q: Total points: ADD_ALL_POINTS (max 25)
