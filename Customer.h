@@ -20,7 +20,8 @@ public:
 
     //displays customers transaction history
     void displayHistory() const;
-
+    
+    bool hasActiveBorrow(Movie* movie);
     //returns customers unique ID
     int getID() const;
 

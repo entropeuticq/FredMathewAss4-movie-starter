@@ -8,6 +8,8 @@ Transaction::~Transaction() {
 
 }
 
+
+
 //returns type of transaction, useful for type dependant logic
 char Transaction::getType() const {
     return type;
@@ -43,7 +45,9 @@ bool Borrow::execute() {
 void Borrow::display() const {
     cout << "Borrowed: " << movie->getTitle() << " by " << customer->getFullName();
 }
-
+Movie* Borrow::getMovie() const {
+    return movie;
+}
 //RETURN
 //constructor
  Return::Return(Customer* customer, Movie* movie) : Transaction('R', ""), customer(customer), movie(movie) {
@@ -54,6 +58,11 @@ void Borrow::display() const {
 
 //execute return transaction
 bool Return::execute() {
+    if(!(customer->hasActiveBorrow(movie))) {
+        cout << "Error: Customer hasn't borrowed this movie" << endl;
+        return false;
+    }
+
     movie->increaseStock(1);
     //adds transaction to customers history
     customer->addTransaction(this);
@@ -63,5 +72,8 @@ bool Return::execute() {
 //display return transaction details, customer name and movie title
 void Return::display() const {
     cout << "Returned: " << movie->getTitle() << " by " << customer->getFullName();
+}
+Movie* Return::getMovie() const {
+    return movie;
 }
 

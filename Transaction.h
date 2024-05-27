@@ -19,6 +19,8 @@ public:
     //gets type of transaction, borrow or return
     char getType() const;
 
+    virtual Movie* getMovie() const = 0;
+
     //description of transaction
     string getDescription() const;
 
@@ -48,6 +50,7 @@ public:
     //display aspects of the borrow transaction
     void display() const override;
 
+    Movie* getMovie() const override;
 private:
     //borrowing customer
     Customer* customer;
@@ -68,6 +71,7 @@ public:
     //display return details
     void display() const override;
 
+    Movie* getMovie() const override;
 private:
     //customer returning movie
     Customer* customer;

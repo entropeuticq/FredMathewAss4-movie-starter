@@ -145,7 +145,10 @@ void CommandProcessor::processReturnCommand(int customerID, char mediaType, char
 
     //creates a borrow transaction and executes it
     Return* returnTransaction = new Return(customer, movie);
-    returnTransaction->execute();
+    bool isSuccessful = returnTransaction->execute();
+    if(!isSuccessful) {
+        delete returnTransaction;
+    }
 }
 
 
