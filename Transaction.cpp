@@ -27,14 +27,16 @@ string Transaction::getDescription() const {
  } 
 
 //execute borrow transaction
-void Borrow::execute() {
+bool Borrow::execute() {
     if(movie->decreaseStock()) {
         //adds transaction to customer history of stock decrease successful
         customer->addTransaction(this);
     } else {
         //alerts if borrow not executed successfully
         cout << "Borrow denied, none in stock." << endl;
+        return false;
     }
+    return true;
 }
 
 //display borrow transaction details, customer name and movie title
@@ -51,10 +53,11 @@ void Borrow::display() const {
  } 
 
 //execute return transaction
-void Return::execute() {
+bool Return::execute() {
     movie->increaseStock(1);
     //adds transaction to customers history
     customer->addTransaction(this);
+    return true;
 }
 
 //display return transaction details, customer name and movie title

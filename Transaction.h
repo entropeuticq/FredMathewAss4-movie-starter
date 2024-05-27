@@ -24,7 +24,7 @@ public:
 
     //virtual because derived classes will implement executing a transaction
     //based on whether it is a borrow or a return
-    virtual void execute() = 0;
+    virtual bool execute() = 0;
 
     //displays transaction details, implemented separately by derived classes
     //based on whether it is a borrow or return
@@ -43,7 +43,7 @@ public:
     Borrow(Customer* customer, Movie* movie);
 
     //execute borrow transaction
-    void execute() override;
+    bool execute() override;
 
     //display aspects of the borrow transaction
     void display() const override;
@@ -63,7 +63,7 @@ public:
     Return(Customer* customer, Movie* movie);
 
     //executes the return transaction
-    void execute() override;
+    bool execute() override;
 
     //display return details
     void display() const override;

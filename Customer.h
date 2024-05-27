@@ -13,6 +13,8 @@ public:
     //constructor, initializing customer details
     Customer(int id, const string& firstName, const string& lastName) : id(id), firstName(firstName), lastName(lastName) {}
 
+    ~Customer();
+
     //add a new transaction to vector that stores them for customer history, const pointer for access-only 
     void addTransaction(const Transaction* transaction);
 

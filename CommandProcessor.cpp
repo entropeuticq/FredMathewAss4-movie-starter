@@ -40,11 +40,11 @@ void CommandProcessor::processCommandString(const string& command) {
             char mediaType;
             char movieType;
             iss >> customerID >> mediaType >> movieType;
-
             //read the rest of the line as attributes
             string attributes;
-            getline(iss, attributes);
 
+            getline(iss, attributes);
+            attributes = removeCommasAndLeadingSpace(attributes);
             //processing borrow command
             processBorrowCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -58,8 +58,10 @@ void CommandProcessor::processCommandString(const string& command) {
 
             //reading rest of line as attributes
             string attributes;
-            getline(iss, attributes);
 
+            getline(iss, attributes);
+            attributes = removeCommasAndLeadingSpace(attributes);
+            
             //process return command
             processReturnCommand(customerID, mediaType, movieType, attributes);
             break;
@@ -100,7 +102,8 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
         cerr << "Error: customer ID " << customerID << " not found." << endl;
         return;
     }
-
+    
+    
     //finds movie by type and attributes
     string parsedAttributes = inventory.parseAttributes(movieType, attributes);
 
@@ -116,8 +119,11 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
 
     //creates a borrow transaction and executes it
     Borrow* borrowTransaction = new Borrow(customer, movie);
-    borrowTransaction->execute();
-    customer->addTransaction(borrowTransaction);
+    bool isSuccessful = borrowTransaction->execute();
+    if(!isSuccessful) {
+        delete borrowTransaction;
+    }
+
 }
 
 void CommandProcessor::processReturnCommand(int customerID, char mediaType, char movieType, const string& attributes) {
@@ -169,6 +175,18 @@ void CommandProcessor::processHistoryCommand(int customerID) {
     }
 
     customer->displayHistory();
+}
+
+string CommandProcessor::removeCommasAndLeadingSpace(string str) {
+    string attributesNoCommas = "";
+    string attributesNoCommasOrLeadingSpace = "";
+    for(const auto &attribute: str) {
+        if(attribute != ',') {
+            attributesNoCommas += attribute;
+        }
+    }
+    attributesNoCommasOrLeadingSpace = attributesNoCommas.substr(1, attributesNoCommas.size());
+    return attributesNoCommasOrLeadingSpace;
 }
 
 
