@@ -114,7 +114,10 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
 
     //creates a borrow transaction and executes it
     Borrow* borrowTransaction = new Borrow(customer, movie);
-    borrowTransaction->execute();
+    bool isSuccessful = borrowTransaction->execute();
+    if(!isSuccessful) {
+        delete borrowTransaction;
+    }
 }
 
 void CommandProcessor::processReturnCommand(int customerID, char mediaType, char movieType, const string& attributes) {

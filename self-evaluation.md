@@ -41,7 +41,7 @@ Q: -1 for each clang-format warning, min -3: ENTER_NUMBER
 - Check under *4. clang-format does not find any formatting issues*
 
 
-Q: -2 for any detected memory leak: 2
+Q: -2 for any detected memory leak: 0
 
 - Check under *5. No memory leaks using g++*
 - Check under *6. No memory leaks using valgrind*
