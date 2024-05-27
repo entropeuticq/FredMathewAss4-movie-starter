@@ -91,7 +91,14 @@ explain borrowing a movie that does not exist: TODO(student)
 
 explain borrowing a movie that has 0 stock: TODO(student)
 
-explain returning a movie that customer has not checked out: TODO(student)
+explain returning a movie that customer has not checked out: 
+->  CommandProcessor reads the return from the file
+->  a transaction is created with the correct movie and customer
+->  transaction::execute() is called
+->  execute() calls Customer::hasActiveBorrow()
+->  since there is no active borrow, this returns false
+->  execute() then determines the transaction is faulty and also returns false
+->  CommandProcessor deletes the transaction object due to the false return
 
 any static_cast or dynamic_cast used: TODO(student)
 

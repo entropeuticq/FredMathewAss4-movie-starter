@@ -16,7 +16,22 @@ void Customer::displayHistory() const {
         cout << endl;
     }
 }
-
+//Checks if the customer has an active borrow of a movie
+bool Customer::hasActiveBorrow(Movie* movie) {
+    int borrows = 0;
+    int returns = 0;
+    for (const auto& transaction : transactions) {
+        if(transaction->getMovie() == movie && transaction->getType() == 'B') {
+            ++borrows;
+        } else if (transaction->getMovie() == movie && transaction->getType() == 'R') {
+            ++returns;
+        }
+    }
+    if(borrows > returns)
+        return true;
+    else   
+        return false;
+}
 //returns Customer ID number
 int Customer::getID() const {
     return id;

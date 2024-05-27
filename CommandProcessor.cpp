@@ -105,12 +105,11 @@ void CommandProcessor::processBorrowCommand(int customerID, char mediaType, char
     
     
     //finds movie by type and attributes
-    string parsedAttributes = inventory.parseAttributes(movieType, attributes);
+    Movie* movie = inventory.findMovie(movieType, attributes);
 
     //debug statement
-    cout << "Borrow comman - parsed attributes: " << parsedAttributes << endl;
+    cout << "Borrow command - parsed attributes: " << attributes << endl;
 
-    Movie* movie = inventory.findMovie(movieType, parsedAttributes);
     if (!movie) {
         //error if movie not found
         cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
@@ -141,13 +140,12 @@ void CommandProcessor::processReturnCommand(int customerID, char mediaType, char
         return;
     }
 
-    string parsedAttributes = inventory.parseAttributes(movieType, attributes);
 
     //debug statement
-    cout << "Return command - parsed attributes: " << parsedAttributes << endl;
+    cout << "Return command - parsed attributes: " << attributes << endl;
 
     //finds movie by type and attributes
-    Movie* movie = inventory.findMovie(movieType, parsedAttributes);
+    Movie* movie = inventory.findMovie(movieType, attributes);
     if (!movie) {
         //error if movie not found
         cerr << "Error: Movie not found for borrow command with attributes: " << attributes << endl;
@@ -156,8 +154,12 @@ void CommandProcessor::processReturnCommand(int customerID, char mediaType, char
 
     //creates a borrow transaction and executes it
     Return* returnTransaction = new Return(customer, movie);
-    returnTransaction->execute();
-    customer->addTransaction(returnTransaction);
+
+    bool isSuccessful = returnTransaction->execute();
+    if(!isSuccessful) {
+        delete returnTransaction;
+    }
+
 }
 
 
